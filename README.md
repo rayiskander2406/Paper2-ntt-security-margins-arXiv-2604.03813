@@ -7,15 +7,17 @@ Artifact repository for reproducing results from [arXiv:2604.03813](https://arxi
 
 ## Abstract
 
-We present a Security Margin Audit methodology for evaluating partially masked NTT hardware in post-quantum cryptographic accelerators. Applying this methodology to the Adams Bridge ML-DSA/ML-KEM accelerator, we show that masking only 7 of 8 INTT layers leaves security margins 2^25 to 2^29 below claimed levels under pro-defender assumptions. A full-scale belief propagation attack on the complete ML-KEM INTT factor graph achieves 100% coefficient recovery at SNR x N = 3000 (30 traces at SNR = 100), with 30 out of 30 full-key recoveries across multiple seeds. We contribute the Security Margin Audit framework, a SASCA belief propagation pipeline validated on production-scale factor graphs, and 19 formal SMT proofs (Z3 + CVC5) establishing the algebraic backbone of our analysis.
+We present a Security Margin Audit methodology for evaluating partially masked NTT hardware in post-quantum cryptographic accelerators. Applying this methodology to the Adams Bridge ML-DSA/ML-KEM accelerator, we show that masking only 1 of 8 INTT layers (12.5%) — leaving 7 layers (87.5%) unmasked — yields effective security margins 2^25 to 2^29 below claimed levels under pro-defender assumptions. A full-scale belief propagation attack on the complete ML-KEM INTT factor graph achieves 100% coefficient recovery at SNR x N = 3,000, with 30 out of 30 full-key recoveries across multiple seeds. We contribute the Security Margin Audit framework, a SASCA belief propagation pipeline validated on production-scale factor graphs, and machine-verified SMT proofs (Z3 + CVC5) establishing the algebraic backbone of our analysis.
 
 ## Quick Start
 
 ```bash
-git clone https://github.com/rayiskander/ntt-security-margins.git
-cd ntt-security-margins
+git clone https://github.com/rayiskander2406/ntt-security-margins-arXiv-2604.03813.git
+cd ntt-security-margins-arXiv-2604.03813
 python -m venv venv && source venv/bin/activate
 pip install -e ".[dev]"
+
+# All commands below assume the virtual environment is active.
 
 # Verify pre-computed results match paper claims (~1 min)
 python reproduce.py --verify
@@ -121,6 +123,13 @@ ntt-security-margins/
 | networkx | >= 3.0 | Yes | Factor graph treewidth (Exp A) |
 | fpylll | >= 0.6 | Optional | Lattice reduction (Exp B) |
 | CVC5 | any | Optional | Universal finite field proof (T6) |
+
+## Reproducibility Notes
+
+- **Virtual environment required.** All `python` commands assume the venv created during Quick Start is active. If you see `ModuleNotFoundError: No module named 'ntt_bp'`, activate the venv: `source venv/bin/activate`.
+- **Deterministic seeds.** All stochastic experiments use fixed random seeds (base seed 42). The full sweep uses `seed = trial * 100000 + snr_n`; ablation uses `seed = trial_index * 1000 + config_index`. Results should be bitwise reproducible on the same platform.
+- **Platform variation.** Numba JIT compilation may produce slightly different floating-point results across CPU architectures due to SIMD instruction differences. Recovery rates (integer counts) are deterministic; entropy values (floating-point) may vary in the last decimal place.
+- **MI rounding note.** The paper's worked example (Section 4.8.5) shows intermediate rounded values that multiply to 0.023198 bits/trace/coefficient. The script computes from full precision, yielding 0.023194. Both produce 992 traces — the headline claim is identical.
 
 ## Citation
 

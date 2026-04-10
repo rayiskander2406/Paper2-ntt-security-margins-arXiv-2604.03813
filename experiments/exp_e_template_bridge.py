@@ -46,6 +46,10 @@ def main():
     print(f"\nCombined MI per trace per coefficient: {mi_per_trace:.6f} bits")
     print(f"  ({total_mi_per_transition:.6f} bits/transition x 3 transitions/trace)")
 
+    # Note: The paper's worked example (Section 4.8.5) shows intermediate
+    # rounded values that multiply to 0.023198; this script computes from
+    # full precision, yielding 0.023194. Both produce 992 traces.
+
     # Traces needed for full MI recovery
     traces_full = math.ceil(MLDSA_COEFF_BITS / mi_per_trace)
     print(f"\nML-DSA coefficient entropy: {MLDSA_COEFF_BITS} bits")

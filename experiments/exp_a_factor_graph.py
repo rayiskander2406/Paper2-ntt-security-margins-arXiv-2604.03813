@@ -336,7 +336,7 @@ def main():
     print(f"   ML-KEM total layer-by-layer: {mlkem_rsi.bp_runs_total_layerwise} BP runs")
 
     # Save results
-    output_dir = Path(__file__).parent.parent / "evidence" / "experiments" / "factor_graph"
+    output_dir = Path(__file__).parent.parent / "evidence"
     output_dir.mkdir(parents=True, exist_ok=True)
 
     json_path = output_dir / "factor_graph_metrics.json"

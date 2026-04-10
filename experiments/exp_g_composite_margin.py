@@ -217,7 +217,7 @@ def sasca_attack_model(inp: ExperimentInputs, scenario: str) -> dict:
 
 
 def main():
-    output_dir = Path(__file__).parent.parent / "evidence" / "experiments" / "composite_margin"
+    output_dir = Path(__file__).parent.parent / "evidence"
     output_dir.mkdir(parents=True, exist_ok=True)
 
     print("=" * 60)
