@@ -1,0 +1,36 @@
+{
+  "title": "Artifact: Partial NTT Masking in PQC Hardware \u2014 A Security Margin Analysis",
+  "description": "Reproduction artifacts for arXiv:2604.03813. Contains belief propagation simulation on ML-KEM INTT factor graphs, formal SMT proofs (Z3/CVC5), and experimental evidence for security margin analysis of partially masked NTT hardware in post-quantum cryptographic accelerators.",
+  "creators": [
+    {
+      "name": "Iskander, Ray",
+      "orcid": "0009-0008-7971-4992"
+    },
+    {
+      "name": "Kirah, Khaled",
+      "orcid": "0000-0001-5090-2529"
+    }
+  ],
+  "license": "Apache-2.0",
+  "upload_type": "software",
+  "access_right": "open",
+  "keywords": [
+    "post-quantum cryptography",
+    "NTT",
+    "side-channel analysis",
+    "belief propagation",
+    "formal verification",
+    "ML-KEM",
+    "ML-DSA",
+    "Adams Bridge",
+    "Boolean masking",
+    "shuffling countermeasures"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "2604.03813",
+      "relation": "isSupplementTo",
+      "scheme": "arxiv"
+    }
+  ]
+}

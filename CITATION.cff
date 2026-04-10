@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "Artifact: Partial NTT Masking in PQC Hardware — A Security Margin Analysis"
+type: software
+authors:
+  - family-names: Iskander
+    given-names: Ray
+    orcid: "https://orcid.org/0009-0008-7971-4992"
+  - family-names: Kirah
+    given-names: Khaled
+    orcid: "https://orcid.org/0000-0001-5090-2529"
+version: 1.0.0
+date-released: "2026-04-10"
+license: Apache-2.0
+repository-code: "https://github.com/rayiskander/ntt-security-margins"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Iskander
+      given-names: Ray
+      orcid: "https://orcid.org/0009-0008-7971-4992"
+    - family-names: Kirah
+      given-names: Khaled
+      orcid: "https://orcid.org/0000-0001-5090-2529"
+  title: "Partial NTT Masking in PQC Hardware: A Security Margin Analysis"
+  year: 2026
+  identifiers:
+    - type: other
+      value: "arXiv:2604.03813"
+      description: "arXiv preprint"
