@@ -4,8 +4,8 @@
     "paper_version": "arXiv:2604.03813",
     "authors": "Ray Iskander, Khaled Kirah",
     "proof_version": "1.0",
-    "date": "2026-04-10T19:16:38+0200",
-    "prover": "Z3 4.15.4 + CVC5 (dual-prover)",
+    "date": "2026-04-10T20:17:17+0200",
+    "prover": "Z3 4.16.0 + CVC5 (dual-prover)",
     "python_version": "3.14.3",
     "platform": "Darwin arm64",
     "reproducibility_command": "pip install z3-solver && python proofs/paper_formal_proofs.py --json-out evidence/paper_proofs.json"
@@ -28,7 +28,7 @@
     "total_verified_claims": 20,
     "all_passed": true,
     "strict_all_unsat": true,
-    "total_z3_time_ms": 60193.134292028844,
+    "total_z3_time_ms": 60261.59216044471,
     "dual_prover_theorems": [
       "T6_CVC5"
     ],
@@ -51,7 +51,7 @@
       "claim": "RSI produces exactly 64 orderings (bijection [0,63]), entropy = 6 bits",
       "paper_ref": "\u00a73.1, Table 1",
       "z3_result": "unsat",
-      "z3_time_ms": 38.877042941749096,
+      "z3_time_ms": 6.635206751525402,
       "assertion_text": "\u2200 chunk\u2208[0,15], idx\u2208[0,3]: chunk*4+idx \u2208 [0,63] (range) AND \u2200 t\u2208[0,63]: \u2203 chunk,idx: chunk*4+idx=t (surjection) AND 2^6 = 64 (entropy)",
       "counterexample": null,
       "notes": null
@@ -63,7 +63,7 @@
       "claim": "Per-layer marginalization (S\u00d7L) is exponentially smaller than S^L",
       "paper_ref": "\u00a74.2",
       "z3_result": "unsat",
-      "z3_time_ms": 0.0865408219397068,
+      "z3_time_ms": 0.07749907672405243,
       "assertion_text": "\u2200 L\u2208{6,7,8}: S\u00d7L < S^L AND S^7/(S\u00d77) > 2^33",
       "counterexample": null,
       "notes": null
@@ -75,7 +75,7 @@
       "claim": "Given a'=(a+b) mod q and \u03c9_inv, the map a\u21a6b'=(2a-a')\u03c9_inv mod q is injective: one free variable (a) uniquely determines b'. DOF=1.",
       "paper_ref": "\u00a72.1, \u00a74.3",
       "z3_result": "unsat",
-      "z3_time_ms": 60038.53833116591,
+      "z3_time_ms": 60124.02208335698,
       "assertion_text": "Algebraic chain: b'(a)==b'(a1) \u2192 2(a-a1)\u03c9_inv \u2261 0 (mod q) \u2192 q | (a-a1) (since q prime, gcd(2\u03c9_inv,q)=1) \u2192 impossible (|a-a1| < q, a\u2260a1). Verified for q=8380417 (ML-DSA) and q=3329 (ML-KEM). Z3 proof path: bounded.",
       "counterexample": null,
       "notes": "Algebraic simplification avoids brute-force quantifier elimination. Proves functional dependence (1 DOF), not injectivity of full butterfly. Z3 proof path: bounded (bounded = specific \u03c9_inv values)."
@@ -87,8 +87,8 @@
       "claim": "Same as T6 \u2014 verified independently via CVC5 FiniteField theory",
       "paper_ref": "\u00a72.1, \u00a74.3",
       "z3_result": "unsat",
-      "z3_time_ms": 112.18345863744617,
-      "assertion_text": "CVC5 QF_FF proof: In F_q, a\u2260a1 \u2227 \u03c9_inv\u22600 \u2192 2\u00b7(a-a1)\u00b7\u03c9_inv \u2260 0 (no zero divisors in prime field). Universal proof for q=3329 (106ms) and q=8380417 (6ms). Prover: This is cvc5 version 1.3.3 [git 8ff882e on branch HEAD].",
+      "z3_time_ms": 119.34929108247161,
+      "assertion_text": "CVC5 QF_FF proof: In F_q, a\u2260a1 \u2227 \u03c9_inv\u22600 \u2192 2\u00b7(a-a1)\u00b7\u03c9_inv \u2260 0 (no zero divisors in prime field). Universal proof for q=3329 (104ms) and q=8380417 (16ms). Prover: This is cvc5 version 1.3.3 [git 8ff882e on branch HEAD].",
       "counterexample": null,
       "notes": "DUAL-PROVER: Independent universal proof via CVC5 finite field theory. No bounded verification needed \u2014 CVC5 natively proves F_q has no zero divisors for prime q. Sanity-checked: removing any constraint yields SAT."
     },
@@ -99,7 +99,7 @@
       "claim": "Chain: 2^46 (CPA) \u2192 2^23 (GS constraint, T6) \u2192 2^9 (SASCA+RSI). Monotone decrease at each stage. Gap = 46-9 = 37 bits.",
       "paper_ref": "\u00a74.8.7, Figure 1, Table 6",
       "z3_result": "unsat",
-      "z3_time_ms": 0.3368351608514786,
+      "z3_time_ms": 3.0569154769182205,
       "assertion_text": "2^46 > 2^23 > 512 > 0 (monotone) AND 512 = 2^9 (final) AND 2^46/2^23 = 2^23 (GS factor) AND 512 < 2^23 (SASCA reduction) AND 46-9 = 37 (gap)",
       "counterexample": null,
       "notes": "Genuine chain: each stage feeds next, no stage increases space."
@@ -111,7 +111,7 @@
       "claim": "Masking L3-L5: no subset of {1,2,6,7} satisfies all four NCs. Cross-band subsets have gap\u22653 (NC3 violated). Low-only subsets violate NC2+NC4. High-only violate NC1.",
       "paper_ref": "\u00a75.4, R1",
       "z3_result": "unsat",
-      "z3_time_ms": 0.26800064370036125,
+      "z3_time_ms": 0.6594969891011715,
       "assertion_text": "\u2200 non-empty S\u2286{1,2,6,7}: S violates \u22651 of NC1-NC4. Cross-band: max_gap\u22653. Low-only: no L7, k<4. High-only: no L1. General: \u2200 k\u2208{2,3,4}: (k+3)-(k-1)-1 = 3.",
       "counterexample": null,
       "notes": "Gap = j-i-1 (intervening unobserved layers). Full set {1,2,6,7}: max_gap=3."
@@ -123,7 +123,7 @@
       "claim": "2^295 < 64! < 2^297 (RP \u2248 296 bits), RSI = 6 bits, ratio \u2265 49\u00d7",
       "paper_ref": "\u00a73.1, Table 1",
       "z3_result": "unsat",
-      "z3_time_ms": 1.8040421418845654,
+      "z3_time_ms": 4.984250292181969,
       "assertion_text": "2^295 < 64! < 2^297 AND 296/6 \u2265 49",
       "counterexample": null,
       "notes": null
@@ -135,7 +135,7 @@
       "claim": "|RSI orderings| = 64 = 2^6",
       "paper_ref": "\u00a74.8.1",
       "z3_result": "unsat",
-      "z3_time_ms": 0.016499776393175125,
+      "z3_time_ms": 0.07179239764809608,
       "assertion_text": "S = 64 = 2^6",
       "counterexample": null,
       "notes": null
@@ -147,7 +147,7 @@
       "claim": "64\u00d77=448, 64\u00d78=512=2^9, 2^8<448\u22642^9",
       "paper_ref": "\u00a74.8.1",
       "z3_result": "unsat",
-      "z3_time_ms": 0.018332619220018387,
+      "z3_time_ms": 0.02729194238781929,
       "assertion_text": "64\u00d77=448 AND 64\u00d78=512=2^9 AND 2^8<448\u22642^9",
       "counterexample": null,
       "notes": null
@@ -159,7 +159,7 @@
       "claim": "2 DOF \u00d7 23 bits = 2^46; 1 DOF \u00d7 23 bits = 2^23; ratio = 2^23",
       "paper_ref": "\u00a74.3",
       "z3_result": "unsat",
-      "z3_time_ms": 0.01808302477002144,
+      "z3_time_ms": 0.03262469545006752,
       "assertion_text": "2^23 \u00d7 2^23 = 2^46 AND 2^46 / 2^23 = 2^23",
       "counterexample": null,
       "notes": null
@@ -171,7 +171,7 @@
       "claim": "8\u00d712=96 bits \u2192 2^96; KCA halves to 4\u00d712=48 \u2192 2^48; ratio=2^48",
       "paper_ref": "\u00a74.3",
       "z3_result": "unsat",
-      "z3_time_ms": 0.27012499049305916,
+      "z3_time_ms": 0.5787909030914307,
       "assertion_text": "8\u00d712=96 AND 4\u00d712=48 AND 2^96/2^48 = 2^48",
       "counterexample": null,
       "notes": null
@@ -183,7 +183,7 @@
       "claim": "ML-DSA: 1/8=12.5% masked. ML-KEM: 1/7\u224814.3% masked.",
       "paper_ref": "\u00a74.4, Table 2, Abstract",
       "z3_result": "unsat",
-      "z3_time_ms": 0.016124919056892395,
+      "z3_time_ms": 0.02312520518898964,
       "assertion_text": "1000/8=125 (12.5%) AND 7000/8=875 (87.5%) AND 10000/7=1428 AND 60000/7=8571",
       "counterexample": null,
       "notes": null
@@ -195,7 +195,7 @@
       "claim": "ML-DSA: 7\u00d7128=896 unmasked butterflies. ML-KEM: 6\u00d7128=768.",
       "paper_ref": "Table 2",
       "z3_result": "unsat",
-      "z3_time_ms": 0.014624558389186859,
+      "z3_time_ms": 0.01933285966515541,
       "assertion_text": "7\u00d7128=896 AND 6\u00d7128=768 AND N/2=128",
       "counterexample": null,
       "notes": null
@@ -207,7 +207,7 @@
       "claim": "16 \u00d7 2^23 = 2^4 \u00d7 2^23 = 2^27",
       "paper_ref": "\u00a74.7",
       "z3_result": "unsat",
-      "z3_time_ms": 0.016083940863609314,
+      "z3_time_ms": 0.0211251899600029,
       "assertion_text": "16 \u00d7 2^23 = 2^27 AND 16 = 2^4",
       "counterexample": null,
       "notes": null
@@ -219,7 +219,7 @@
       "claim": "7\u00d74096=28672; 2^60 < 2^46\u00d728672 < 2^61 (\u2248 2^60.8)",
       "paper_ref": "\u00a74.7",
       "z3_result": "unsat",
-      "z3_time_ms": 0.017541926354169846,
+      "z3_time_ms": 0.05470775067806244,
       "assertion_text": "7\u00d74096=28672 AND 2^60 < 2^46\u00d728672 < 2^61",
       "counterexample": null,
       "notes": "Integer bounds replace floating-point log2(28672)\u224814.81"
@@ -231,7 +231,7 @@
       "claim": "6\u00d74096=24576; 2^62 < 2^48\u00d724576 < 2^63 (\u2248 2^62.6)",
       "paper_ref": "\u00a74.7",
       "z3_result": "unsat",
-      "z3_time_ms": 0.01750001683831215,
+      "z3_time_ms": 0.02816738560795784,
       "assertion_text": "6\u00d74096=24576 AND 2^62 < 2^48\u00d724576 < 2^63",
       "counterexample": null,
       "notes": "Integer bounds replace floating-point log2(24576)\u224814.58"
@@ -243,7 +243,7 @@
       "claim": "ML-DSA: 2^46\u00d764^7=2^88. ML-KEM: 2^96\u00d764^6=2^132.",
       "paper_ref": "\u00a74.7, Table 4",
       "z3_result": "unsat",
-      "z3_time_ms": 0.5566668696701527,
+      "z3_time_ms": 1.7139171250164509,
       "assertion_text": "64^7=2^42, 46+42=88, 2^46\u00d72^42=2^88; 64^6=2^36, 96+36=132",
       "counterexample": null,
       "notes": null
@@ -255,7 +255,7 @@
       "claim": "3/7 \u2248 42.85% masking overhead; 4/7 \u2248 57.14% cost reduction",
       "paper_ref": "\u00a75.4, R1",
       "z3_result": "unsat",
-      "z3_time_ms": 0.015374738723039627,
+      "z3_time_ms": 0.05508307367563248,
       "assertion_text": "30000/7=4285 (42.85%) AND 40000/7=5714 (57.14%)",
       "counterexample": null,
       "notes": null
@@ -267,7 +267,7 @@
       "claim": "MI components 0.000963+0.005555+0.001215 = 0.007733; \u00d73 = 0.023199 (displayed 0.023198); ceil(23.0/0.023198) = 992 traces",
       "paper_ref": "\u00a74.8.5, Exp E",
       "z3_result": "unsat",
-      "z3_time_ms": 0.04824995994567871,
+      "z3_time_ms": 0.15870900824666023,
       "assertion_text": "Part 1: 963+5555+1215=7733, \u00d73=23199 (display arithmetic). Part 2: 991\u00d723198253 < 23\u00d710^9 \u2264 992\u00d723198253 (trace count from exact MI). Part 3: 23198253 rounds to 0.023198 (6 d.p. truncation).",
       "counterexample": null,
       "notes": "Verifies arithmetic chain from stated MI components to 992-trace threshold. The Gaussian capacity formula \u00bdlog\u2082(1+SNR/2) that produces the MI components is transcendental and beyond SMT verification; validated by Shannon (1948)."
@@ -279,7 +279,7 @@
       "claim": "Gap \u2265 3 in GS INTT factor graph kills BP recovery (Fisher p=0.0083)",
       "paper_ref": "\u00a74.8.9, NC3",
       "z3_result": "unsat",
-      "z3_time_ms": 0.014833174645900726,
+      "z3_time_ms": 0.0227498821914196,
       "assertion_text": "Imported from nc3_fourier_contraction.py; parameter q=3329 consistent.",
       "counterexample": null,
       "notes": "NC3 evidence: N/A"

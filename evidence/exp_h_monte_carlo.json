@@ -1,0 +1,608 @@
+{
+  "experiment": "H: Monte Carlo BP Validation (2-layer subgraph)",
+  "reference": "arXiv:2604.03813, Section 4.8.8",
+  "parameters": {
+    "n_coeffs": 8,
+    "n_layers": 2,
+    "q": 3329,
+    "n_trials": 10,
+    "max_bp_iter": 30
+  },
+  "results": [
+    {
+      "snr_n": 300,
+      "n_trials": 10,
+      "mean_error_rate": 1.0,
+      "std_error_rate": 0.0,
+      "mean_bsr": 0.0,
+      "mean_mi_bp": 0.0075,
+      "n_error_above_50pct": 10,
+      "wilson_ci_above_50pct": [
+        0.7225,
+        1.0
+      ],
+      "per_trial": [
+        {
+          "seed": 342,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.693,
+          "mi_bp": 0.0075
+        },
+        {
+          "seed": 10342,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.693,
+          "mi_bp": 0.0075
+        },
+        {
+          "seed": 20342,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.693,
+          "mi_bp": 0.0075
+        },
+        {
+          "seed": 30342,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.693,
+          "mi_bp": 0.0075
+        },
+        {
+          "seed": 40342,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.693,
+          "mi_bp": 0.0075
+        },
+        {
+          "seed": 50342,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.693,
+          "mi_bp": 0.0075
+        },
+        {
+          "seed": 60342,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.693,
+          "mi_bp": 0.0075
+        },
+        {
+          "seed": 70342,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.693,
+          "mi_bp": 0.0075
+        },
+        {
+          "seed": 80342,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.693,
+          "mi_bp": 0.0075
+        },
+        {
+          "seed": 90342,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.693,
+          "mi_bp": 0.0075
+        }
+      ]
+    },
+    {
+      "snr_n": 500,
+      "n_trials": 10,
+      "mean_error_rate": 1.0,
+      "std_error_rate": 0.0,
+      "mean_bsr": 0.0,
+      "mean_mi_bp": 0.1398,
+      "n_error_above_50pct": 10,
+      "wilson_ci_above_50pct": [
+        0.7225,
+        1.0
+      ],
+      "per_trial": [
+        {
+          "seed": 542,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.556,
+          "mi_bp": 0.1452
+        },
+        {
+          "seed": 10542,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.554,
+          "mi_bp": 0.1464
+        },
+        {
+          "seed": 20542,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.552,
+          "mi_bp": 0.1485
+        },
+        {
+          "seed": 30542,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.562,
+          "mi_bp": 0.1391
+        },
+        {
+          "seed": 40542,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.553,
+          "mi_bp": 0.148
+        },
+        {
+          "seed": 50542,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.568,
+          "mi_bp": 0.1333
+        },
+        {
+          "seed": 60542,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.569,
+          "mi_bp": 0.1318
+        },
+        {
+          "seed": 70542,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.575,
+          "mi_bp": 0.1262
+        },
+        {
+          "seed": 80542,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.559,
+          "mi_bp": 0.1418
+        },
+        {
+          "seed": 90542,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.564,
+          "mi_bp": 0.1373
+        }
+      ]
+    },
+    {
+      "snr_n": 1000,
+      "n_trials": 10,
+      "mean_error_rate": 1.0,
+      "std_error_rate": 0.0,
+      "mean_bsr": 0.0,
+      "mean_mi_bp": 0.4122,
+      "n_error_above_50pct": 10,
+      "wilson_ci_above_50pct": [
+        0.7225,
+        1.0
+      ],
+      "per_trial": [
+        {
+          "seed": 1042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.325,
+          "mi_bp": 0.3754
+        },
+        {
+          "seed": 11042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.278,
+          "mi_bp": 0.4233
+        },
+        {
+          "seed": 21042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.287,
+          "mi_bp": 0.4138
+        },
+        {
+          "seed": 31042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.295,
+          "mi_bp": 0.406
+        },
+        {
+          "seed": 41042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.286,
+          "mi_bp": 0.4147
+        },
+        {
+          "seed": 51042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.296,
+          "mi_bp": 0.4045
+        },
+        {
+          "seed": 61042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.231,
+          "mi_bp": 0.4697
+        },
+        {
+          "seed": 71042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.317,
+          "mi_bp": 0.3837
+        },
+        {
+          "seed": 81042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.284,
+          "mi_bp": 0.4173
+        },
+        {
+          "seed": 91042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 11.288,
+          "mi_bp": 0.4132
+        }
+      ]
+    },
+    {
+      "snr_n": 3000,
+      "n_trials": 10,
+      "mean_error_rate": 0.9875,
+      "std_error_rate": 0.0375,
+      "mean_bsr": 0.0125,
+      "mean_mi_bp": 1.5791,
+      "n_error_above_50pct": 10,
+      "wilson_ci_above_50pct": [
+        0.7225,
+        1.0
+      ],
+      "per_trial": [
+        {
+          "seed": 3042,
+          "bsr": 0.125,
+          "error_rate": 0.875,
+          "avg_entropy": 10.054,
+          "mi_bp": 1.6471
+        },
+        {
+          "seed": 13042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 10.335,
+          "mi_bp": 1.3662
+        },
+        {
+          "seed": 23042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 9.913,
+          "mi_bp": 1.7877
+        },
+        {
+          "seed": 33042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 9.961,
+          "mi_bp": 1.7401
+        },
+        {
+          "seed": 43042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 10.123,
+          "mi_bp": 1.5781
+        },
+        {
+          "seed": 53042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 10.274,
+          "mi_bp": 1.4272
+        },
+        {
+          "seed": 63042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 10.263,
+          "mi_bp": 1.4374
+        },
+        {
+          "seed": 73042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 10.129,
+          "mi_bp": 1.5723
+        },
+        {
+          "seed": 83042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 10.321,
+          "mi_bp": 1.38
+        },
+        {
+          "seed": 93042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 9.846,
+          "mi_bp": 1.8552
+        }
+      ]
+    },
+    {
+      "snr_n": 5000,
+      "n_trials": 10,
+      "mean_error_rate": 1.0,
+      "std_error_rate": 0.0,
+      "mean_bsr": 0.0,
+      "mean_mi_bp": 2.3195,
+      "n_error_above_50pct": 10,
+      "wilson_ci_above_50pct": [
+        0.7225,
+        1.0
+      ],
+      "per_trial": [
+        {
+          "seed": 5042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 9.227,
+          "mi_bp": 2.4742
+        },
+        {
+          "seed": 15042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 9.4,
+          "mi_bp": 2.3004
+        },
+        {
+          "seed": 25042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 9.778,
+          "mi_bp": 1.9226
+        },
+        {
+          "seed": 35042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 9.15,
+          "mi_bp": 2.5506
+        },
+        {
+          "seed": 45042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 9.059,
+          "mi_bp": 2.6418
+        },
+        {
+          "seed": 55042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 9.934,
+          "mi_bp": 1.767
+        },
+        {
+          "seed": 65042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 9.604,
+          "mi_bp": 2.0974
+        },
+        {
+          "seed": 75042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 9.377,
+          "mi_bp": 2.3237
+        },
+        {
+          "seed": 85042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 9.261,
+          "mi_bp": 2.4396
+        },
+        {
+          "seed": 95042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 9.023,
+          "mi_bp": 2.678
+        }
+      ]
+    },
+    {
+      "snr_n": 10000,
+      "n_trials": 10,
+      "mean_error_rate": 1.0,
+      "std_error_rate": 0.0,
+      "mean_bsr": 0.0,
+      "mean_mi_bp": 3.5553,
+      "n_error_above_50pct": 10,
+      "wilson_ci_above_50pct": [
+        0.7225,
+        1.0
+      ],
+      "per_trial": [
+        {
+          "seed": 10042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 8.309,
+          "mi_bp": 3.3921
+        },
+        {
+          "seed": 20042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 8.073,
+          "mi_bp": 3.6279
+        },
+        {
+          "seed": 30042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 8.238,
+          "mi_bp": 3.4632
+        },
+        {
+          "seed": 40042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 8.017,
+          "mi_bp": 3.6844
+        },
+        {
+          "seed": 50042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 8.075,
+          "mi_bp": 3.6261
+        },
+        {
+          "seed": 60042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 8.09,
+          "mi_bp": 3.6111
+        },
+        {
+          "seed": 70042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 8.049,
+          "mi_bp": 3.6522
+        },
+        {
+          "seed": 80042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 8.258,
+          "mi_bp": 3.443
+        },
+        {
+          "seed": 90042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 8.275,
+          "mi_bp": 3.4261
+        },
+        {
+          "seed": 100042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 8.074,
+          "mi_bp": 3.627
+        }
+      ]
+    },
+    {
+      "snr_n": 30000,
+      "n_trials": 10,
+      "mean_error_rate": 1.0,
+      "std_error_rate": 0.0,
+      "mean_bsr": 0.0,
+      "mean_mi_bp": 5.2247,
+      "n_error_above_50pct": 10,
+      "wilson_ci_above_50pct": [
+        0.7225,
+        1.0
+      ],
+      "per_trial": [
+        {
+          "seed": 30042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 6.476,
+          "mi_bp": 5.2252
+        },
+        {
+          "seed": 40042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 6.469,
+          "mi_bp": 5.2323
+        },
+        {
+          "seed": 50042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 6.478,
+          "mi_bp": 5.2232
+        },
+        {
+          "seed": 60042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 6.476,
+          "mi_bp": 5.225
+        },
+        {
+          "seed": 70042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 6.475,
+          "mi_bp": 5.2255
+        },
+        {
+          "seed": 80042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 6.478,
+          "mi_bp": 5.2233
+        },
+        {
+          "seed": 90042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 6.477,
+          "mi_bp": 5.2242
+        },
+        {
+          "seed": 100042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 6.477,
+          "mi_bp": 5.2239
+        },
+        {
+          "seed": 110042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 6.478,
+          "mi_bp": 5.2233
+        },
+        {
+          "seed": 120042,
+          "bsr": 0.0,
+          "error_rate": 1.0,
+          "avg_entropy": 6.48,
+          "mi_bp": 5.2212
+        }
+      ]
+    }
+  ]
+}
