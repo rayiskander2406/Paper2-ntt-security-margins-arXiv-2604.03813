@@ -1,0 +1,362 @@
+[
+  {
+    "config": "NC1-A_L2-L7",
+    "layers": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "seed": 3003270,
+    "snr_n": 50000,
+    "bsr": 0.0,
+    "full_key": false,
+    "mi_bp": 0.0,
+    "entropy": 11.7,
+    "bp_iterations": 1,
+    "time_s": 196.6
+  },
+  {
+    "config": "NC1-A_L2-L7",
+    "layers": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "seed": 3002270,
+    "snr_n": 50000,
+    "bsr": 0.0,
+    "full_key": false,
+    "mi_bp": 0.0,
+    "entropy": 11.7,
+    "bp_iterations": 1,
+    "time_s": 197.1
+  },
+  {
+    "config": "NC1-A_L2-L7",
+    "layers": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "seed": 3004270,
+    "snr_n": 50000,
+    "bsr": 0.0,
+    "full_key": false,
+    "mi_bp": 0.0,
+    "entropy": 11.7,
+    "bp_iterations": 1,
+    "time_s": 197.5
+  },
+  {
+    "config": "NC1-A_L2-L7",
+    "layers": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "seed": 3005270,
+    "snr_n": 50000,
+    "bsr": 0.0,
+    "full_key": false,
+    "mi_bp": 0.0,
+    "entropy": 11.7,
+    "bp_iterations": 1,
+    "time_s": 197.5
+  },
+  {
+    "config": "NC1-A_L2-L7",
+    "layers": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "seed": 3001270,
+    "snr_n": 50000,
+    "bsr": 0.0,
+    "full_key": false,
+    "mi_bp": 0.0,
+    "entropy": 11.7,
+    "bp_iterations": 1,
+    "time_s": 198.1
+  },
+  {
+    "config": "NC1-A_L2-L7",
+    "layers": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "seed": 3000270,
+    "snr_n": 50000,
+    "bsr": 0.0,
+    "full_key": false,
+    "mi_bp": 0.0,
+    "entropy": 11.7,
+    "bp_iterations": 1,
+    "time_s": 198.2
+  },
+  {
+    "config": "NC1-A_L2-L7",
+    "layers": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "seed": 3006270,
+    "snr_n": 50000,
+    "bsr": 0.0,
+    "full_key": false,
+    "mi_bp": 0.0,
+    "entropy": 11.7,
+    "bp_iterations": 1,
+    "time_s": 239.9
+  },
+  {
+    "config": "NC1-A_L2-L7",
+    "layers": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "seed": 3009270,
+    "snr_n": 50000,
+    "bsr": 0.0,
+    "full_key": false,
+    "mi_bp": 0.0,
+    "entropy": 11.7,
+    "bp_iterations": 1,
+    "time_s": 239.9
+  },
+  {
+    "config": "NC1-A_L2-L7",
+    "layers": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "seed": 3008270,
+    "snr_n": 50000,
+    "bsr": 0.0,
+    "full_key": false,
+    "mi_bp": 0.0,
+    "entropy": 11.7,
+    "bp_iterations": 1,
+    "time_s": 240.3
+  },
+  {
+    "config": "NC1-A_L2-L7",
+    "layers": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "seed": 3007270,
+    "snr_n": 50000,
+    "bsr": 0.0,
+    "full_key": false,
+    "mi_bp": 0.0,
+    "entropy": 11.7,
+    "bp_iterations": 1,
+    "time_s": 240.9
+  },
+  {
+    "config": "NC1-B_L2+L4+L6+L7",
+    "layers": [
+      2,
+      4,
+      6,
+      7
+    ],
+    "seed": 3000190,
+    "snr_n": 50000,
+    "bsr": 0.0,
+    "full_key": false,
+    "mi_bp": 0.0,
+    "entropy": 11.7,
+    "bp_iterations": 1,
+    "time_s": 240.0
+  },
+  {
+    "config": "NC1-B_L2+L4+L6+L7",
+    "layers": [
+      2,
+      4,
+      6,
+      7
+    ],
+    "seed": 3001190,
+    "snr_n": 50000,
+    "bsr": 0.0039,
+    "full_key": false,
+    "mi_bp": 0.0,
+    "entropy": 11.7,
+    "bp_iterations": 1,
+    "time_s": 241.3
+  },
+  {
+    "config": "NC1-B_L2+L4+L6+L7",
+    "layers": [
+      2,
+      4,
+      6,
+      7
+    ],
+    "seed": 3002190,
+    "snr_n": 50000,
+    "bsr": 0.0,
+    "full_key": false,
+    "mi_bp": 0.0,
+    "entropy": 11.7,
+    "bp_iterations": 1,
+    "time_s": 236.5
+  },
+  {
+    "config": "NC1-B_L2+L4+L6+L7",
+    "layers": [
+      2,
+      4,
+      6,
+      7
+    ],
+    "seed": 3003190,
+    "snr_n": 50000,
+    "bsr": 0.0,
+    "full_key": false,
+    "mi_bp": 0.0,
+    "entropy": 11.7,
+    "bp_iterations": 1,
+    "time_s": 236.2
+  },
+  {
+    "config": "NC1-B_L2+L4+L6+L7",
+    "layers": [
+      2,
+      4,
+      6,
+      7
+    ],
+    "seed": 3006190,
+    "snr_n": 50000,
+    "bsr": 0.0,
+    "full_key": false,
+    "mi_bp": 0.0,
+    "entropy": 11.7,
+    "bp_iterations": 1,
+    "time_s": 236.3
+  },
+  {
+    "config": "NC1-B_L2+L4+L6+L7",
+    "layers": [
+      2,
+      4,
+      6,
+      7
+    ],
+    "seed": 3007190,
+    "snr_n": 50000,
+    "bsr": 0.0,
+    "full_key": false,
+    "mi_bp": 0.0,
+    "entropy": 11.7,
+    "bp_iterations": 1,
+    "time_s": 235.4
+  },
+  {
+    "config": "NC1-B_L2+L4+L6+L7",
+    "layers": [
+      2,
+      4,
+      6,
+      7
+    ],
+    "seed": 3005190,
+    "snr_n": 50000,
+    "bsr": 0.0,
+    "full_key": false,
+    "mi_bp": 0.0,
+    "entropy": 11.7,
+    "bp_iterations": 1,
+    "time_s": 236.9
+  },
+  {
+    "config": "NC1-B_L2+L4+L6+L7",
+    "layers": [
+      2,
+      4,
+      6,
+      7
+    ],
+    "seed": 3004190,
+    "snr_n": 50000,
+    "bsr": 0.0,
+    "full_key": false,
+    "mi_bp": 0.0,
+    "entropy": 11.7,
+    "bp_iterations": 1,
+    "time_s": 238.0
+  },
+  {
+    "config": "NC1-B_L2+L4+L6+L7",
+    "layers": [
+      2,
+      4,
+      6,
+      7
+    ],
+    "seed": 3009190,
+    "snr_n": 50000,
+    "bsr": 0.0,
+    "full_key": false,
+    "mi_bp": 0.0,
+    "entropy": 11.7,
+    "bp_iterations": 1,
+    "time_s": 165.0
+  },
+  {
+    "config": "NC1-B_L2+L4+L6+L7",
+    "layers": [
+      2,
+      4,
+      6,
+      7
+    ],
+    "seed": 3008190,
+    "snr_n": 50000,
+    "bsr": 0.0,
+    "full_key": false,
+    "mi_bp": 0.0,
+    "entropy": 11.7,
+    "bp_iterations": 1,
+    "time_s": 166.5
+  }
+]

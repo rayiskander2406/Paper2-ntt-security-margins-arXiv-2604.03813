@@ -1,0 +1,307 @@
+[
+  {
+    "damping": 0.1,
+    "snr_n": 3000,
+    "n_seeds": 5,
+    "mean_bsr": 1.0,
+    "full_key_rate": 1.0,
+    "n_full_key": 5,
+    "wilson_ci_95": [
+      0.5655,
+      1
+    ],
+    "mean_mi": 11.69,
+    "mean_bp_iters": 17.2,
+    "per_seed": [
+      {
+        "seed": 3100,
+        "damping": 0.1,
+        "bsr": 1.0,
+        "mi_bp": 11.7,
+        "entropy": 0.0,
+        "bp_iterations": 18,
+        "time_s": 1440.7
+      },
+      {
+        "seed": 103100,
+        "damping": 0.1,
+        "bsr": 1.0,
+        "mi_bp": 11.7,
+        "entropy": 0.0,
+        "bp_iterations": 17,
+        "time_s": 1375.1
+      },
+      {
+        "seed": 203100,
+        "damping": 0.1,
+        "bsr": 1.0,
+        "mi_bp": 11.64,
+        "entropy": 0.06,
+        "bp_iterations": 18,
+        "time_s": 1439.5
+      },
+      {
+        "seed": 303100,
+        "damping": 0.1,
+        "bsr": 1.0,
+        "mi_bp": 11.7,
+        "entropy": 0.0,
+        "bp_iterations": 17,
+        "time_s": 1375.1
+      },
+      {
+        "seed": 403100,
+        "damping": 0.1,
+        "bsr": 1.0,
+        "mi_bp": 11.7,
+        "entropy": 0.0,
+        "bp_iterations": 16,
+        "time_s": 695.4
+      }
+    ]
+  },
+  {
+    "damping": 0.3,
+    "snr_n": 3000,
+    "n_seeds": 5,
+    "mean_bsr": 0.9,
+    "full_key_rate": 0.8,
+    "n_full_key": 4,
+    "wilson_ci_95": [
+      0.3755,
+      0.9638
+    ],
+    "mean_mi": 11.51,
+    "mean_bp_iters": 25.2,
+    "per_seed": [
+      {
+        "seed": 3300,
+        "damping": 0.3,
+        "bsr": 1.0,
+        "mi_bp": 11.32,
+        "entropy": 0.38,
+        "bp_iterations": 26,
+        "time_s": 2135.0
+      },
+      {
+        "seed": 103300,
+        "damping": 0.3,
+        "bsr": 1.0,
+        "mi_bp": 11.7,
+        "entropy": 0.0,
+        "bp_iterations": 23,
+        "time_s": 1929.6
+      },
+      {
+        "seed": 203300,
+        "damping": 0.3,
+        "bsr": 0.5,
+        "mi_bp": 11.2,
+        "entropy": 0.5,
+        "bp_iterations": 27,
+        "time_s": 2185.6
+      },
+      {
+        "seed": 303300,
+        "damping": 0.3,
+        "bsr": 1.0,
+        "mi_bp": 11.7,
+        "entropy": 0.0,
+        "bp_iterations": 23,
+        "time_s": 1930.3
+      },
+      {
+        "seed": 403300,
+        "damping": 0.3,
+        "bsr": 1.0,
+        "mi_bp": 11.65,
+        "entropy": 0.05,
+        "bp_iterations": 27,
+        "time_s": 1225.6
+      }
+    ]
+  },
+  {
+    "damping": 0.5,
+    "snr_n": 3000,
+    "n_seeds": 5,
+    "mean_bsr": 0.9,
+    "full_key_rate": 0.8,
+    "n_full_key": 4,
+    "wilson_ci_95": [
+      0.3755,
+      0.9638
+    ],
+    "mean_mi": 11.6,
+    "mean_bp_iters": 30.0,
+    "per_seed": [
+      {
+        "seed": 3500,
+        "damping": 0.5,
+        "bsr": 1.0,
+        "mi_bp": 11.69,
+        "entropy": 0.01,
+        "bp_iterations": 30,
+        "time_s": 2550.1
+      },
+      {
+        "seed": 103500,
+        "damping": 0.5,
+        "bsr": 1.0,
+        "mi_bp": 11.68,
+        "entropy": 0.02,
+        "bp_iterations": 30,
+        "time_s": 2550.2
+      },
+      {
+        "seed": 203500,
+        "damping": 0.5,
+        "bsr": 0.5,
+        "mi_bp": 11.25,
+        "entropy": 0.45,
+        "bp_iterations": 30,
+        "time_s": 2544.0
+      },
+      {
+        "seed": 303500,
+        "damping": 0.5,
+        "bsr": 1.0,
+        "mi_bp": 11.69,
+        "entropy": 0.01,
+        "bp_iterations": 30,
+        "time_s": 2547.8
+      },
+      {
+        "seed": 403500,
+        "damping": 0.5,
+        "bsr": 1.0,
+        "mi_bp": 11.69,
+        "entropy": 0.01,
+        "bp_iterations": 30,
+        "time_s": 1269.8
+      }
+    ]
+  },
+  {
+    "damping": 0.7,
+    "snr_n": 3000,
+    "n_seeds": 5,
+    "mean_bsr": 1.0,
+    "full_key_rate": 1.0,
+    "n_full_key": 5,
+    "wilson_ci_95": [
+      0.5655,
+      1
+    ],
+    "mean_mi": 11.05,
+    "mean_bp_iters": 30.0,
+    "per_seed": [
+      {
+        "seed": 3700,
+        "damping": 0.7,
+        "bsr": 1.0,
+        "mi_bp": 10.71,
+        "entropy": 0.99,
+        "bp_iterations": 30,
+        "time_s": 3033.5
+      },
+      {
+        "seed": 103700,
+        "damping": 0.7,
+        "bsr": 1.0,
+        "mi_bp": 11.06,
+        "entropy": 0.64,
+        "bp_iterations": 30,
+        "time_s": 3030.9
+      },
+      {
+        "seed": 203700,
+        "damping": 0.7,
+        "bsr": 1.0,
+        "mi_bp": 11.17,
+        "entropy": 0.53,
+        "bp_iterations": 30,
+        "time_s": 3034.8
+      },
+      {
+        "seed": 303700,
+        "damping": 0.7,
+        "bsr": 1.0,
+        "mi_bp": 11.03,
+        "entropy": 0.67,
+        "bp_iterations": 30,
+        "time_s": 3029.7
+      },
+      {
+        "seed": 403700,
+        "damping": 0.7,
+        "bsr": 1.0,
+        "mi_bp": 11.27,
+        "entropy": 0.43,
+        "bp_iterations": 30,
+        "time_s": 3706.0
+      }
+    ]
+  },
+  {
+    "damping": 0.9,
+    "snr_n": 3000,
+    "n_seeds": 5,
+    "mean_bsr": 0.9203,
+    "full_key_rate": 0.2,
+    "n_full_key": 1,
+    "wilson_ci_95": [
+      0.0362,
+      0.6245
+    ],
+    "mean_mi": 5.86,
+    "mean_bp_iters": 30.0,
+    "per_seed": [
+      {
+        "seed": 3900,
+        "damping": 0.9,
+        "bsr": 1.0,
+        "mi_bp": 5.85,
+        "entropy": 5.85,
+        "bp_iterations": 30,
+        "time_s": 5251.7
+      },
+      {
+        "seed": 103900,
+        "damping": 0.9,
+        "bsr": 0.7578,
+        "mi_bp": 5.88,
+        "entropy": 5.82,
+        "bp_iterations": 30,
+        "time_s": 5251.3
+      },
+      {
+        "seed": 203900,
+        "damping": 0.9,
+        "bsr": 0.9375,
+        "mi_bp": 5.61,
+        "entropy": 6.09,
+        "bp_iterations": 30,
+        "time_s": 5254.0
+      },
+      {
+        "seed": 303900,
+        "damping": 0.9,
+        "bsr": 0.9375,
+        "mi_bp": 6.11,
+        "entropy": 5.59,
+        "bp_iterations": 30,
+        "time_s": 5253.0
+      },
+      {
+        "seed": 403900,
+        "damping": 0.9,
+        "bsr": 0.9688,
+        "mi_bp": 5.86,
+        "entropy": 5.84,
+        "bp_iterations": 30,
+        "time_s": 3356.3
+      }
+    ]
+  }
+]

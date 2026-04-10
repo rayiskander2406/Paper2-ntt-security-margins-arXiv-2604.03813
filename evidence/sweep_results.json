@@ -1,0 +1,1114 @@
+[
+  {
+    "snr_n": 500,
+    "n_trials": 10,
+    "mean_l0_error": 0.625,
+    "std_l0_error": 0.4366,
+    "mean_l0_entropy": 2.46,
+    "std_l0_entropy": 0.31,
+    "mean_l0_bsr": 0.375,
+    "mi_bp": 9.2449,
+    "mi_1_layer": 4.2283,
+    "bp_gain": 2.19,
+    "n_100pct_bsr": 3,
+    "wilson_ci_95_100pct": [
+      0.1078,
+      0.6032
+    ],
+    "per_trial": [
+      {
+        "trial": 0,
+        "seed": 500,
+        "l0_bsr": 0.0,
+        "l0_map_error": 1.0,
+        "l0_avg_entropy": 2.04,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 1,
+        "seed": 100500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 2.81,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 2,
+        "seed": 200500,
+        "l0_bsr": 0.0,
+        "l0_map_error": 1.0,
+        "l0_avg_entropy": 2.65,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 3,
+        "seed": 300500,
+        "l0_bsr": 0.0,
+        "l0_map_error": 1.0,
+        "l0_avg_entropy": 2.94,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 4,
+        "seed": 400500,
+        "l0_bsr": 0.0,
+        "l0_map_error": 1.0,
+        "l0_avg_entropy": 2.45,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 5,
+        "seed": 500500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 2.19,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 6,
+        "seed": 600500,
+        "l0_bsr": 0.5,
+        "l0_map_error": 0.5,
+        "l0_avg_entropy": 2.21,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 7,
+        "seed": 700500,
+        "l0_bsr": 0.0,
+        "l0_map_error": 1.0,
+        "l0_avg_entropy": 2.37,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 8,
+        "seed": 800500,
+        "l0_bsr": 0.25,
+        "l0_map_error": 0.75,
+        "l0_avg_entropy": 2.82,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 9,
+        "seed": 900500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 2.08,
+        "bp_iterations": 30
+      }
+    ]
+  },
+  {
+    "snr_n": 1000,
+    "n_trials": 20,
+    "mean_l0_error": 0.3625,
+    "std_l0_error": 0.3305,
+    "mean_l0_entropy": 1.12,
+    "std_l0_entropy": 0.32,
+    "mean_l0_bsr": 0.6375,
+    "mi_bp": 10.5824,
+    "mi_1_layer": 4.7283,
+    "bp_gain": 2.24,
+    "n_100pct_bsr": 8,
+    "wilson_ci_95_100pct": [
+      0.2188,
+      0.6134
+    ],
+    "per_trial": [
+      {
+        "trial": 0,
+        "seed": 1000,
+        "l0_bsr": 0.0,
+        "l0_map_error": 1.0,
+        "l0_avg_entropy": 1.18,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 1,
+        "seed": 101000,
+        "l0_bsr": 0.5,
+        "l0_map_error": 0.5,
+        "l0_avg_entropy": 1.57,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 2,
+        "seed": 201000,
+        "l0_bsr": 0.5,
+        "l0_map_error": 0.5,
+        "l0_avg_entropy": 0.78,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 3,
+        "seed": 301000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.95,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 4,
+        "seed": 401000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.69,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 5,
+        "seed": 501000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.95,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 6,
+        "seed": 601000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.66,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 7,
+        "seed": 701000,
+        "l0_bsr": 0.5,
+        "l0_map_error": 0.5,
+        "l0_avg_entropy": 0.81,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 8,
+        "seed": 801000,
+        "l0_bsr": 0.5,
+        "l0_map_error": 0.5,
+        "l0_avg_entropy": 0.96,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 9,
+        "seed": 901000,
+        "l0_bsr": 0.5,
+        "l0_map_error": 0.5,
+        "l0_avg_entropy": 1.3,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 10,
+        "seed": 1001000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 1.19,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 11,
+        "seed": 1101000,
+        "l0_bsr": 0.5,
+        "l0_map_error": 0.5,
+        "l0_avg_entropy": 1.71,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 12,
+        "seed": 1201000,
+        "l0_bsr": 0.25,
+        "l0_map_error": 0.75,
+        "l0_avg_entropy": 1.72,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 13,
+        "seed": 1301000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 1.36,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 14,
+        "seed": 1401000,
+        "l0_bsr": 0.0,
+        "l0_map_error": 1.0,
+        "l0_avg_entropy": 0.75,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 15,
+        "seed": 1501000,
+        "l0_bsr": 0.5,
+        "l0_map_error": 0.5,
+        "l0_avg_entropy": 1.45,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 16,
+        "seed": 1601000,
+        "l0_bsr": 0.5,
+        "l0_map_error": 0.5,
+        "l0_avg_entropy": 0.99,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 17,
+        "seed": 1701000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.99,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 18,
+        "seed": 1801000,
+        "l0_bsr": 0.5,
+        "l0_map_error": 0.5,
+        "l0_avg_entropy": 1.42,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 19,
+        "seed": 1901000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.94,
+        "bp_iterations": 30
+      }
+    ]
+  },
+  {
+    "snr_n": 1500,
+    "n_trials": 20,
+    "mean_l0_error": 0.075,
+    "std_l0_error": 0.1785,
+    "mean_l0_entropy": 0.51,
+    "std_l0_entropy": 0.23,
+    "mean_l0_bsr": 0.925,
+    "mi_bp": 11.1904,
+    "mi_1_layer": 5.0208,
+    "bp_gain": 2.23,
+    "n_100pct_bsr": 17,
+    "wilson_ci_95_100pct": [
+      0.6396,
+      0.9476
+    ],
+    "per_trial": [
+      {
+        "trial": 0,
+        "seed": 1500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.68,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 1,
+        "seed": 101500,
+        "l0_bsr": 0.5,
+        "l0_map_error": 0.5,
+        "l0_avg_entropy": 0.94,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 2,
+        "seed": 201500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.63,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 3,
+        "seed": 301500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.6,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 4,
+        "seed": 401500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.29,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 5,
+        "seed": 501500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.26,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 6,
+        "seed": 601500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.82,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 7,
+        "seed": 701500,
+        "l0_bsr": 0.5,
+        "l0_map_error": 0.5,
+        "l0_avg_entropy": 0.88,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 8,
+        "seed": 801500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.7,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 9,
+        "seed": 901500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.21,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 10,
+        "seed": 1001500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.39,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 11,
+        "seed": 1101500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.5,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 12,
+        "seed": 1201500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.3,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 13,
+        "seed": 1301500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.27,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 14,
+        "seed": 1401500,
+        "l0_bsr": 0.5,
+        "l0_map_error": 0.5,
+        "l0_avg_entropy": 0.89,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 15,
+        "seed": 1501500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.41,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 16,
+        "seed": 1601500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.39,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 17,
+        "seed": 1701500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.33,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 18,
+        "seed": 1801500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.32,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 19,
+        "seed": 1901500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.4,
+        "bp_iterations": 30
+      }
+    ]
+  },
+  {
+    "snr_n": 2000,
+    "n_trials": 20,
+    "mean_l0_error": 0.05,
+    "std_l0_error": 0.15,
+    "mean_l0_entropy": 0.27,
+    "std_l0_entropy": 0.22,
+    "mean_l0_bsr": 0.95,
+    "mi_bp": 11.4319,
+    "mi_1_layer": 5.2283,
+    "bp_gain": 2.19,
+    "n_100pct_bsr": 18,
+    "wilson_ci_95_100pct": [
+      0.699,
+      0.9721
+    ],
+    "per_trial": [
+      {
+        "trial": 0,
+        "seed": 2000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.07,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 1,
+        "seed": 102000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.62,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 2,
+        "seed": 202000,
+        "l0_bsr": 0.5,
+        "l0_map_error": 0.5,
+        "l0_avg_entropy": 0.58,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 3,
+        "seed": 302000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.47,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 4,
+        "seed": 402000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.09,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 5,
+        "seed": 502000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.53,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 6,
+        "seed": 602000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.04,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 7,
+        "seed": 702000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.1,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 8,
+        "seed": 802000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.19,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 9,
+        "seed": 902000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.23,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 10,
+        "seed": 1002000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.08,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 11,
+        "seed": 1102000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.09,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 12,
+        "seed": 1202000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.14,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 13,
+        "seed": 1302000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.27,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 14,
+        "seed": 1402000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.11,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 15,
+        "seed": 1502000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.54,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 16,
+        "seed": 1602000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.28,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 17,
+        "seed": 1702000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.05,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 18,
+        "seed": 1802000,
+        "l0_bsr": 0.5,
+        "l0_map_error": 0.5,
+        "l0_avg_entropy": 0.77,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 19,
+        "seed": 1902000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.13,
+        "bp_iterations": 30
+      }
+    ]
+  },
+  {
+    "snr_n": 2500,
+    "n_trials": 20,
+    "mean_l0_error": 0.05,
+    "std_l0_error": 0.15,
+    "mean_l0_entropy": 0.18,
+    "std_l0_entropy": 0.18,
+    "mean_l0_bsr": 0.95,
+    "mi_bp": 11.5239,
+    "mi_1_layer": 5.3892,
+    "bp_gain": 2.14,
+    "n_100pct_bsr": 18,
+    "wilson_ci_95_100pct": [
+      0.699,
+      0.9721
+    ],
+    "per_trial": [
+      {
+        "trial": 0,
+        "seed": 2500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.4,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 1,
+        "seed": 102500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.17,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 2,
+        "seed": 202500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.02,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 3,
+        "seed": 302500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.03,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 4,
+        "seed": 402500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.14,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 5,
+        "seed": 502500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.27,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 6,
+        "seed": 602500,
+        "l0_bsr": 0.5,
+        "l0_map_error": 0.5,
+        "l0_avg_entropy": 0.71,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 7,
+        "seed": 702500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.04,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 8,
+        "seed": 802500,
+        "l0_bsr": 0.5,
+        "l0_map_error": 0.5,
+        "l0_avg_entropy": 0.36,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 9,
+        "seed": 902500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.07,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 10,
+        "seed": 1002500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.25,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 11,
+        "seed": 1102500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.18,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 12,
+        "seed": 1202500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.11,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 13,
+        "seed": 1302500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.02,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 14,
+        "seed": 1402500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.04,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 15,
+        "seed": 1502500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.2,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 16,
+        "seed": 1602500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.05,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 17,
+        "seed": 1702500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.02,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 18,
+        "seed": 1802500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.43,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 19,
+        "seed": 1902500,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.03,
+        "bp_iterations": 30
+      }
+    ]
+  },
+  {
+    "snr_n": 3000,
+    "n_trials": 10,
+    "mean_l0_error": 0.0,
+    "std_l0_error": 0.0,
+    "mean_l0_entropy": 0.05,
+    "std_l0_entropy": 0.05,
+    "mean_l0_bsr": 1.0,
+    "mi_bp": 11.6479,
+    "mi_1_layer": 5.5208,
+    "bp_gain": 2.11,
+    "n_100pct_bsr": 10,
+    "wilson_ci_95_100pct": [
+      0.7225,
+      1
+    ],
+    "per_trial": [
+      {
+        "trial": 0,
+        "seed": 3000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.06,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 1,
+        "seed": 103000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.02,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 2,
+        "seed": 203000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.01,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 3,
+        "seed": 303000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.09,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 4,
+        "seed": 403000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.06,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 5,
+        "seed": 503000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.01,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 6,
+        "seed": 603000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.02,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 7,
+        "seed": 703000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.06,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 8,
+        "seed": 803000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.01,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 9,
+        "seed": 903000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.19,
+        "bp_iterations": 30
+      }
+    ]
+  },
+  {
+    "snr_n": 5000,
+    "n_trials": 10,
+    "mean_l0_error": 0.0,
+    "std_l0_error": 0.0,
+    "mean_l0_entropy": 0.06,
+    "std_l0_entropy": 0.12,
+    "mean_l0_bsr": 1.0,
+    "mi_bp": 11.6419,
+    "mi_1_layer": 5.8892,
+    "bp_gain": 1.98,
+    "n_100pct_bsr": 10,
+    "wilson_ci_95_100pct": [
+      0.7225,
+      1
+    ],
+    "per_trial": [
+      {
+        "trial": 0,
+        "seed": 5000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.0,
+        "bp_iterations": 27
+      },
+      {
+        "trial": 1,
+        "seed": 105000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.0,
+        "bp_iterations": 29
+      },
+      {
+        "trial": 2,
+        "seed": 205000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.0,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 3,
+        "seed": 305000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.34,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 4,
+        "seed": 405000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.0,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 5,
+        "seed": 505000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.0,
+        "bp_iterations": 29
+      },
+      {
+        "trial": 6,
+        "seed": 605000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.25,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 7,
+        "seed": 705000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.0,
+        "bp_iterations": 29
+      },
+      {
+        "trial": 8,
+        "seed": 805000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.0,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 9,
+        "seed": 905000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.0,
+        "bp_iterations": 30
+      }
+    ]
+  },
+  {
+    "snr_n": 10000,
+    "n_trials": 10,
+    "mean_l0_error": 0.0,
+    "std_l0_error": 0.0,
+    "mean_l0_entropy": 0.0,
+    "std_l0_entropy": 0.0,
+    "mean_l0_bsr": 1.0,
+    "mi_bp": 11.6999,
+    "mi_1_layer": 6.3892,
+    "bp_gain": 1.83,
+    "n_100pct_bsr": 10,
+    "wilson_ci_95_100pct": [
+      0.7225,
+      1
+    ],
+    "per_trial": [
+      {
+        "trial": 0,
+        "seed": 10000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.0,
+        "bp_iterations": 27
+      },
+      {
+        "trial": 1,
+        "seed": 110000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.0,
+        "bp_iterations": 28
+      },
+      {
+        "trial": 2,
+        "seed": 210000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.0,
+        "bp_iterations": 26
+      },
+      {
+        "trial": 3,
+        "seed": 310000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.0,
+        "bp_iterations": 28
+      },
+      {
+        "trial": 4,
+        "seed": 410000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.0,
+        "bp_iterations": 27
+      },
+      {
+        "trial": 5,
+        "seed": 510000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.0,
+        "bp_iterations": 26
+      },
+      {
+        "trial": 6,
+        "seed": 610000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.0,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 7,
+        "seed": 710000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.0,
+        "bp_iterations": 29
+      },
+      {
+        "trial": 8,
+        "seed": 810000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.01,
+        "bp_iterations": 30
+      },
+      {
+        "trial": 9,
+        "seed": 910000,
+        "l0_bsr": 1.0,
+        "l0_map_error": 0.0,
+        "l0_avg_entropy": 0.0,
+        "bp_iterations": 28
+      }
+    ]
+  }
+]
