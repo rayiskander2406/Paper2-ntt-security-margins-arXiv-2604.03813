@@ -32,7 +32,7 @@ python reproduce.py --full
 ## Repository Structure
 
 ```
-ntt-security-margins/
+ntt-security-margins-arXiv-2604.03813/
 ├── reproduce.py                  # Main reproduction entry point
 ├── experiments/                  # All paper experiments
 │   ├── exp_a_factor_graph.py     # Exp A: Factor graph construction + treewidth
