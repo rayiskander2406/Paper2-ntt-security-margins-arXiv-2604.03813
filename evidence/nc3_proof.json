@@ -1,0 +1,185 @@
+{
+  "theorem": "NC3 \u2014 Gap >= 3 kills BP recovery in GS INTT",
+  "fourier_contraction": [
+    {
+      "snr_n": 100,
+      "rho": 0.9836852109636561,
+      "mi_obs": 3.0673137600672984,
+      "mi_conv": 2.5673137600672913,
+      "mi_loss": 0.5000000000000071
+    },
+    {
+      "snr_n": 500,
+      "rho": 0.9967155375528487,
+      "mi_obs": 4.22827780751098,
+      "mi_conv": 3.728277807510965,
+      "mi_loss": 0.5000000000000151
+    },
+    {
+      "snr_n": 1000,
+      "rho": 0.9983564180956863,
+      "mi_obs": 4.728277807510981,
+      "mi_conv": 4.228277807510956,
+      "mi_loss": 0.5000000000000249
+    },
+    {
+      "snr_n": 3000,
+      "rho": 0.9994518389395848,
+      "mi_obs": 5.520759057871558,
+      "mi_conv": 5.02075905787153,
+      "mi_loss": 0.5000000000000284
+    },
+    {
+      "snr_n": 5000,
+      "rho": 0.9996710672968582,
+      "mi_obs": 5.889241854954661,
+      "mi_conv": 5.389241854954624,
+      "mi_loss": 0.5000000000000373
+    },
+    {
+      "snr_n": 10000,
+      "rho": 0.9998355201216138,
+      "mi_obs": 6.389241854954662,
+      "mi_conv": 5.889241854954614,
+      "mi_loss": 0.500000000000048
+    },
+    {
+      "snr_n": 50000,
+      "rho": 0.9999671018598187,
+      "mi_obs": 7.550205902398343,
+      "mi_conv": 7.0502059023982495,
+      "mi_loss": 0.5000000000000933
+    }
+  ],
+  "mi_budget": {
+    "parameters": {
+      "K": 7,
+      "q": 3329,
+      "mi_max": 11.700873155140263,
+      "mi_per_layer": 1.6715533078771805,
+      "mi_loss_per_relay": 0.5,
+      "alpha": 0.7008770239969289,
+      "map_threshold": 10.700873155140263
+    },
+    "bounds": {
+      "0": {
+        "gap": 0,
+        "mi_direct": 11.700873155140263,
+        "relay_hops": 1,
+        "relay_efficiency": 0.7008770239969289,
+        "mi_relay": 0.0,
+        "mi_total_bound": 11.700873155140263,
+        "above_threshold": "True"
+      },
+      "1": {
+        "gap": 1,
+        "mi_direct": 10.029319847263082,
+        "relay_hops": 1,
+        "relay_efficiency": 0.7008770239969289,
+        "mi_relay": 1.1715533078771805,
+        "mi_total_bound": 11.200873155140263,
+        "above_threshold": "True"
+      },
+      "2": {
+        "gap": 2,
+        "mi_direct": 8.357766539385903,
+        "relay_hops": 1,
+        "relay_efficiency": 0.7008770239969289,
+        "mi_relay": 2.343106615754361,
+        "mi_total_bound": 10.700873155140265,
+        "above_threshold": "True"
+      },
+      "3": {
+        "gap": 3,
+        "mi_direct": 6.686213231508722,
+        "relay_hops": 2,
+        "relay_efficiency": 0.4912286027667916,
+        "mi_relay": 2.463344387636148,
+        "mi_total_bound": 9.14955761914487,
+        "above_threshold": "False"
+      },
+      "4": {
+        "gap": 4,
+        "mi_direct": 5.014659923631541,
+        "relay_hops": 2,
+        "relay_efficiency": 0.4912286027667916,
+        "mi_relay": 3.2844591835148638,
+        "mi_total_bound": 8.299119107146405,
+        "above_threshold": "False"
+      },
+      "5": {
+        "gap": 5,
+        "mi_direct": 3.343106615754361,
+        "relay_hops": 3,
+        "relay_efficiency": 0.34429084120935843,
+        "mi_relay": 2.877502472476601,
+        "mi_total_bound": 6.220609088230962,
+        "above_threshold": "False"
+      },
+      "6": {
+        "gap": 6,
+        "mi_direct": 1.6715533078771805,
+        "relay_hops": 3,
+        "relay_efficiency": 0.34429084120935843,
+        "mi_relay": 3.453002966971921,
+        "mi_total_bound": 5.124556274849102,
+        "above_threshold": "False"
+      },
+      "7": {
+        "gap": 7,
+        "mi_direct": 0.0,
+        "relay_hops": 4,
+        "relay_efficiency": 0.24130554017621433,
+        "mi_relay": 2.8234855172344866,
+        "mi_total_bound": 2.8234855172344866,
+        "above_threshold": "False"
+      }
+    }
+  },
+  "exhaustive_verification": {
+    "nc1_nc2_nc3_fk_ge50": 7,
+    "nc1_nc2_nc3_total": 7,
+    "nc1_nc2_not_nc3_fk_ge50": 0,
+    "nc1_nc2_not_nc3_total": 3,
+    "fisher_p": 0.008333333333333333,
+    "seed_level": {
+      "nc3_ok_seeds": 350,
+      "nc3_ok_fk_seeds": 325,
+      "nc3_no_seeds": 150,
+      "nc3_no_fk_seeds": 0
+    }
+  },
+  "stride_analysis": {
+    "1": {
+      "stride_ratio": 2,
+      "positions_tested": 7,
+      "all_same_ratio": true
+    },
+    "2": {
+      "stride_ratio": 4,
+      "positions_tested": 6,
+      "all_same_ratio": true
+    },
+    "3": {
+      "stride_ratio": 8,
+      "positions_tested": 5,
+      "all_same_ratio": true
+    },
+    "4": {
+      "stride_ratio": 16,
+      "positions_tested": 4,
+      "all_same_ratio": true
+    },
+    "5": {
+      "stride_ratio": 32,
+      "positions_tested": 3,
+      "all_same_ratio": true
+    },
+    "6": {
+      "stride_ratio": 64,
+      "positions_tested": 2,
+      "all_same_ratio": true
+    }
+  },
+  "proved": true
+}
