@@ -1,6 +1,7 @@
 # Partial NTT Masking in PQC Hardware: A Security Margin Analysis
 
 [![arXiv](https://img.shields.io/badge/arXiv-2604.03813-b31b1b.svg)](https://arxiv.org/abs/2604.03813)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19508454.svg)](https://doi.org/10.5281/zenodo.19508454)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
 Artifact repository for reproducing results from [arXiv:2604.03813](https://arxiv.org/abs/2604.03813).
