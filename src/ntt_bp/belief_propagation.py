@@ -289,12 +289,15 @@ def run_bp(
         l0_ent /= n_coeffs
         entropy_history.append(l0_ent)
 
-        l0_vars = list(range(min(50, n_coeffs)))
-        max_diff = (
-            max(np.max(np.abs(beliefs[i] - old_beliefs[i])) for i in l0_vars)
-            if l0_vars
-            else 0
-        )
+        # v3 fix: converge over all variables, not the L0 subset (the L0-only
+        # check early-exited before information reached far-from-observation
+        # targets). The old delta over the first 50 L0
+        # coefficients could fall below convergence_tol at iteration 1 whenever
+        # the observed layers sit >=2 butterfly-hops from L0 (L0 stays uniform
+        # until BP propagates information in from the observations), fabricating
+        # MI=0 / 0% key recovery for no-L1 configs. Convergence must be judged
+        # over the whole graph.
+        max_diff = float(np.max(np.abs(beliefs - old_beliefs)))
 
         if verbose:
             print(

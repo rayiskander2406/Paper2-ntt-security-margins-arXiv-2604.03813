@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Experiment I (Key Enumeration): Recover full keys from partial BP successes.
 
-At SNR*N = 1500, BP achieves ~85% full-key recovery. For the ~15% failures,
+At SNR*N = 1500, for the trials where BP fails,
 this experiment tests whether key enumeration (brute-forcing the most uncertain
 coefficients) can push the success rate higher.
 

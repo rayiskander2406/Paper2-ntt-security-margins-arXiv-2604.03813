@@ -1,0 +1,13 @@
+Exp H -- Monte Carlo BP validation on the 2-layer ML-KEM subgraph, as published in source.md 4.8.8
+source: evidence/exp_h_monte_carlo.json  (regenerated under the all-variable convergence criterion)
+error = wrong L0 MAP decisions over 80 per-coefficient decisions per point (10 trials x 8 coefficients), from per-trial bsr
+ci = Wilson 95% interval over those 80 decisions (z = 1.959963985); trials>50% and its CI are stored in the artifact as-is
+entropy and mi are means over the 10 trials (artifact stores mean_mi_bp; the entropy mean is derived from per_trial avg_entropy)
+
+snr_n 300    error 100%   wrong 80/80  ci [95.4%, 100%]  entropy 11.6  raw 11.61   mi 0.09 raw 0.0911   trials_above_50pct 10/10  ci_trials [72.2%, 100%]   [operating point]
+snr_n 500    error 100%   wrong 80/80  ci [95.4%, 100%]  entropy 11.5  raw 11.474  mi 0.23 raw 0.2264   trials_above_50pct 10/10  ci_trials [72.2%, 100%]
+snr_n 1000   error 100%   wrong 80/80  ci [95.4%, 100%]  entropy 11.2  raw 11.19   mi 0.51 raw 0.5108   trials_above_50pct 10/10  ci_trials [72.2%, 100%]
+snr_n 3000   error 98.8%  wrong 79/80  ci [93.3%, 99.8%]  entropy 10.0  raw 10.015  mi 1.69 raw 1.6857   trials_above_50pct 10/10  ci_trials [72.2%, 100%]
+snr_n 5000   error 100%   wrong 80/80  ci [95.4%, 100%]  entropy 9.3   raw 9.291   mi 2.41 raw 2.4097   trials_above_50pct 10/10  ci_trials [72.2%, 100%]
+snr_n 10000  error 100%   wrong 80/80  ci [95.4%, 100%]  entropy 8.1   raw 8.085   mi 3.62 raw 3.6161   trials_above_50pct 10/10  ci_trials [72.2%, 100%]   [operating point]
+snr_n 30000  error 100%   wrong 80/80  ci [95.4%, 100%]  entropy 6.5   raw 6.458   mi 5.24 raw 5.2427   trials_above_50pct 10/10  ci_trials [72.2%, 100%]

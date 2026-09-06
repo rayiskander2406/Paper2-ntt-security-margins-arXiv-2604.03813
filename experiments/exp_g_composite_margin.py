@@ -35,9 +35,18 @@ class ExperimentInputs:
     rsi_overheads: dict = None  # sigma_bias_ratio -> overhead_factor
 
     # Exp D: RTL leakage
+    # UNUSED: none of the three fields below is referenced anywhere in this
+    # module or serialized into composite_margin.json -- they are transcribed, not consumed.
+    # Two defects, retained here rather than silently "corrected":
+    #   1. snr_combined_per_coeff = 0.01064 matches neither its own comment
+    #      ((0.0027+0.0155+0.0034)/2 = 0.0108) nor the measured values ((0.0027+0.0155+0.0033)/2
+    #      = 0.01075). The comment also cites mem_read as 0.0034; the measured value is 0.0033.
+    #   2. These are the N=1,000 SNRs. Three sets are in circulation -- 0.0023 (N=10,000, the
+    #      fullest data), 0.0027 (N=1,000, committed), 0.002671 (what Exp E actually computed
+    #      the 992-trace MI chain from).
     snr_butterfly_hd: float = 0.0027
     snr_memwr_hd: float = 0.0155
-    snr_combined_per_coeff: float = 0.01064  # (0.0027 + 0.0155 + 0.0034) / 2
+    snr_combined_per_coeff: float = 0.01064
 
     # Exp E: Template bridge
     mi_per_trace_per_coeff: float = 0.023198  # bits/INTT/coefficient

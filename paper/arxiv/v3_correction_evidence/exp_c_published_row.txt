@@ -1,0 +1,10 @@
+Exp C -- RSI vs RP shuffling overhead, as published in source.md:388-392
+source: evidence/experiments/rsi_vs_rp/shuffling_overhead.json
+overhead printed at the fewest decimals within 1% of the archived median; ratio derived from the ARCHIVED median
+
+sigma_bias 0.0  overhead 4096.0   raw 4096.0               ratio 1
+sigma_bias 0.1  overhead 1195.0   raw 1194.6666666666667   ratio 3
+sigma_bias 0.3  overhead 7.3      raw 7.333333333333333    ratio 559
+sigma_bias 0.5  overhead 1.25     raw 1.25                 ratio 3,277
+sigma_bias 1.0  overhead 1.0      raw 1.0                  ratio 4,096
+sigma_bias 2.0  overhead 1.0      raw 1.0                  ratio 4,096

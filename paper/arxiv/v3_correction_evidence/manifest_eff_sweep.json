@@ -1,0 +1,1222 @@
+[
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 3000,
+  "seed": 71357,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_3000",
+  "sidx": 0
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 3000,
+  "seed": 171357,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_3000",
+  "sidx": 1
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 3000,
+  "seed": 271357,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_3000",
+  "sidx": 2
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 3000,
+  "seed": 371357,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_3000",
+  "sidx": 3
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 3000,
+  "seed": 471357,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_3000",
+  "sidx": 4
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 3000,
+  "seed": 571357,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_3000",
+  "sidx": 5
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 3000,
+  "seed": 671357,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_3000",
+  "sidx": 6
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 3000,
+  "seed": 771357,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_3000",
+  "sidx": 7
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 3000,
+  "seed": 871357,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_3000",
+  "sidx": 8
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 3000,
+  "seed": 971357,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_3000",
+  "sidx": 9
+ },
+ {
+  "config": "L1-L4",
+  "layers": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "snr_n": 3000,
+  "seed": 71244,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "x3k_L1-L4",
+  "sidx": 0
+ },
+ {
+  "config": "L1-L4",
+  "layers": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "snr_n": 3000,
+  "seed": 171244,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "x3k_L1-L4",
+  "sidx": 1
+ },
+ {
+  "config": "L1-L4",
+  "layers": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "snr_n": 3000,
+  "seed": 271244,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "x3k_L1-L4",
+  "sidx": 2
+ },
+ {
+  "config": "L1-L4",
+  "layers": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "snr_n": 3000,
+  "seed": 371244,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "x3k_L1-L4",
+  "sidx": 3
+ },
+ {
+  "config": "L1-L4",
+  "layers": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "snr_n": 3000,
+  "seed": 471244,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "x3k_L1-L4",
+  "sidx": 4
+ },
+ {
+  "config": "L1-L4",
+  "layers": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "snr_n": 3000,
+  "seed": 571244,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "x3k_L1-L4",
+  "sidx": 5
+ },
+ {
+  "config": "L1-L4",
+  "layers": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "snr_n": 3000,
+  "seed": 671244,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "x3k_L1-L4",
+  "sidx": 6
+ },
+ {
+  "config": "L1-L4",
+  "layers": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "snr_n": 3000,
+  "seed": 771244,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "x3k_L1-L4",
+  "sidx": 7
+ },
+ {
+  "config": "L1-L4",
+  "layers": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "snr_n": 3000,
+  "seed": 871244,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "x3k_L1-L4",
+  "sidx": 8
+ },
+ {
+  "config": "L1-L4",
+  "layers": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "snr_n": 3000,
+  "seed": 971244,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "x3k_L1-L4",
+  "sidx": 9
+ },
+ {
+  "config": "L1-L6",
+  "layers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "snr_n": 3000,
+  "seed": 71256,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "x3k_L1-L6",
+  "sidx": 0
+ },
+ {
+  "config": "L1-L6",
+  "layers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "snr_n": 3000,
+  "seed": 171256,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "x3k_L1-L6",
+  "sidx": 1
+ },
+ {
+  "config": "L1-L6",
+  "layers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "snr_n": 3000,
+  "seed": 271256,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "x3k_L1-L6",
+  "sidx": 2
+ },
+ {
+  "config": "L1-L6",
+  "layers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "snr_n": 3000,
+  "seed": 371256,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "x3k_L1-L6",
+  "sidx": 3
+ },
+ {
+  "config": "L1-L6",
+  "layers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "snr_n": 3000,
+  "seed": 471256,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "x3k_L1-L6",
+  "sidx": 4
+ },
+ {
+  "config": "L1-L6",
+  "layers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "snr_n": 3000,
+  "seed": 571256,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "x3k_L1-L6",
+  "sidx": 5
+ },
+ {
+  "config": "L1-L6",
+  "layers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "snr_n": 3000,
+  "seed": 671256,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "x3k_L1-L6",
+  "sidx": 6
+ },
+ {
+  "config": "L1-L6",
+  "layers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "snr_n": 3000,
+  "seed": 771256,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "x3k_L1-L6",
+  "sidx": 7
+ },
+ {
+  "config": "L1-L6",
+  "layers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "snr_n": 3000,
+  "seed": 871256,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "x3k_L1-L6",
+  "sidx": 8
+ },
+ {
+  "config": "L1-L6",
+  "layers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "snr_n": 3000,
+  "seed": 971256,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "x3k_L1-L6",
+  "sidx": 9
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 10000,
+  "seed": 71387,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_10000",
+  "sidx": 0
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 10000,
+  "seed": 171387,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_10000",
+  "sidx": 1
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 10000,
+  "seed": 271387,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_10000",
+  "sidx": 2
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 10000,
+  "seed": 371387,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_10000",
+  "sidx": 3
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 10000,
+  "seed": 471387,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_10000",
+  "sidx": 4
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 10000,
+  "seed": 571387,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_10000",
+  "sidx": 5
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 10000,
+  "seed": 671387,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_10000",
+  "sidx": 6
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 10000,
+  "seed": 771387,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_10000",
+  "sidx": 7
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 10000,
+  "seed": 871387,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_10000",
+  "sidx": 8
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 10000,
+  "seed": 971387,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_10000",
+  "sidx": 9
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 1500,
+  "seed": 71397,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_1500",
+  "sidx": 0
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 1500,
+  "seed": 171397,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_1500",
+  "sidx": 1
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 1500,
+  "seed": 271397,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_1500",
+  "sidx": 2
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 1500,
+  "seed": 371397,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_1500",
+  "sidx": 3
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 1500,
+  "seed": 471397,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_1500",
+  "sidx": 4
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 1500,
+  "seed": 571397,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_1500",
+  "sidx": 5
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 1500,
+  "seed": 671397,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_1500",
+  "sidx": 6
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 1500,
+  "seed": 771397,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_1500",
+  "sidx": 7
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 1500,
+  "seed": 871397,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_1500",
+  "sidx": 8
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 1500,
+  "seed": 971397,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_1500",
+  "sidx": 9
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 1000,
+  "seed": 71407,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_1000",
+  "sidx": 0
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 1000,
+  "seed": 171407,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_1000",
+  "sidx": 1
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 1000,
+  "seed": 271407,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_1000",
+  "sidx": 2
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 1000,
+  "seed": 371407,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_1000",
+  "sidx": 3
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 1000,
+  "seed": 471407,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_1000",
+  "sidx": 4
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 1000,
+  "seed": 571407,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_1000",
+  "sidx": 5
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 1000,
+  "seed": 671407,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_1000",
+  "sidx": 6
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 1000,
+  "seed": 771407,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_1000",
+  "sidx": 7
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 1000,
+  "seed": 871407,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_1000",
+  "sidx": 8
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 1000,
+  "seed": 971407,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_1000",
+  "sidx": 9
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 2000,
+  "seed": 71417,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_2000",
+  "sidx": 0
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 2000,
+  "seed": 171417,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_2000",
+  "sidx": 1
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 2000,
+  "seed": 271417,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_2000",
+  "sidx": 2
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 2000,
+  "seed": 371417,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_2000",
+  "sidx": 3
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 2000,
+  "seed": 471417,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_2000",
+  "sidx": 4
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 2000,
+  "seed": 571417,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_2000",
+  "sidx": 5
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 2000,
+  "seed": 671417,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_2000",
+  "sidx": 6
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 2000,
+  "seed": 771417,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_2000",
+  "sidx": 7
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 2000,
+  "seed": 871417,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_2000",
+  "sidx": 8
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 2000,
+  "seed": 971417,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_2000",
+  "sidx": 9
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 500,
+  "seed": 71427,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_500",
+  "sidx": 0
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 500,
+  "seed": 171427,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_500",
+  "sidx": 1
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 500,
+  "seed": 271427,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_500",
+  "sidx": 2
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 500,
+  "seed": 371427,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_500",
+  "sidx": 3
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 500,
+  "seed": 471427,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_500",
+  "sidx": 4
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 500,
+  "seed": 571427,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_500",
+  "sidx": 5
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 500,
+  "seed": 671427,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_500",
+  "sidx": 6
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 500,
+  "seed": 771427,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_500",
+  "sidx": 7
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 500,
+  "seed": 871427,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_500",
+  "sidx": 8
+ },
+ {
+  "config": "L1+L3+L5+L7",
+  "layers": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "snr_n": 500,
+  "seed": 971427,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "eff_spread_500",
+  "sidx": 9
+ }
+]

@@ -1,6 +1,6 @@
 {
   "title": "Artifact: Partial NTT Masking in PQC Hardware \u2014 A Security Margin Analysis",
-  "description": "Reproduction artifacts for arXiv:2604.03813. Contains belief propagation simulation on ML-KEM INTT factor graphs, formal SMT proofs (Z3/CVC5), and experimental evidence for security margin analysis of partially masked NTT hardware in post-quantum cryptographic accelerators.",
+  "description": "Reproduction artifacts for arXiv:2604.03813. Contains belief propagation simulation on ML-KEM INTT factor graphs, formal SMT proofs (Z3/CVC5), and experimental evidence for security margin analysis of partially masked NTT hardware in post-quantum cryptographic accelerators. Version 3.0.0 supersedes 1.0.0 with the corrected corpus and reproduction driver of arXiv:2604.03813 v3.",
   "creators": [
     {
       "name": "Iskander, Ray",

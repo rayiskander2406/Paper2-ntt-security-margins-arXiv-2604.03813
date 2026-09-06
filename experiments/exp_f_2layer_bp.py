@@ -151,11 +151,11 @@ def main():
         print(f"{snr_n:>8} | {avg_entropy:>8.2f} | {avg_mi:>8.2f} | "
               f"{avg_bsr:>7.1%} | {avg_time:>5.3f}s")
 
-    # Expected: ~3.9-bit gain at SNR*N=10^4
+    # Expected: ~3.6-bit gain at SNR*N=10^4 (artifact regenerated 2026-09-02 under the all-variable criterion, 1d9c5fb; earlier versions said ~3.9)
     high_snr = next((r for r in all_results if r["snr_n"] == 10000), None)
     if high_snr:
         print(f"\n  MI gain at SNR*N=10000: {high_snr['mean_mi_bp']:.2f} bits")
-        print(f"  (Expected: ~3.9 bits for 2-layer subgraph)")
+        print(f"  (Expected: ~3.6 bits for 2-layer subgraph)")
 
     # Save
     output = {

@@ -1,0 +1,755 @@
+{
+  "snr_source": "experiments/rtl/patch-validation/final_results.json",
+  "sets": {
+    "published N=1,000": {
+      "butterfly": {
+        "snr": 0.0026754101411769747,
+        "snr_masked": 0.00017256876941572493,
+        "masked_t": 3.35824101001014,
+        "unmasked_t": 6.338083696248879
+      },
+      "mem_write": {
+        "snr": 0.01551465533427962,
+        "snr_masked": 0.005640486081926045,
+        "masked_t": 14.264541490646772,
+        "unmasked_t": 13.169125599958768
+      },
+      "mem_read": {
+        "snr": 0.0033247500646127115,
+        "snr_masked": 0.0018189410549118833,
+        "masked_t": 7.0882330595864405,
+        "unmasked_t": 5.618057724709715
+      },
+      "address": {
+        "snr": 0.000414569394008195,
+        "snr_masked": 3.94068102758905e-05,
+        "masked_t": 1.4315134540865384,
+        "unmasked_t": 2.628254034812489
+      },
+      "control": {
+        "snr": 0.0,
+        "snr_masked": 0.0,
+        "masked_t": 0.0,
+        "unmasked_t": 0.0
+      }
+    },
+    "published N=10,000": {
+      "butterfly": {
+        "snr": 0.0023307466671513358,
+        "snr_masked": 5.00455509666842e-05,
+        "masked_t": 6.532483057179657,
+        "unmasked_t": 15.518260193608368
+      },
+      "mem_write": {
+        "snr": 0.015262498271872286,
+        "snr_masked": 0.005560663663903786,
+        "masked_t": 43.75896789871266,
+        "unmasked_t": 37.385543213172845
+      },
+      "mem_read": {
+        "snr": 0.0030353199527271215,
+        "snr_masked": 0.0018225397099772846,
+        "masked_t": 18.257791387840456,
+        "unmasked_t": 15.683160730746518
+      },
+      "address": {
+        "snr": 3.704252663227041e-05,
+        "snr_masked": 9.602044963707795e-06,
+        "masked_t": 2.093227672436799,
+        "unmasked_t": 3.281700019601395
+      },
+      "control": {
+        "snr": 0.0,
+        "snr_masked": 0.0,
+        "masked_t": 0.0,
+        "unmasked_t": 0.0
+      }
+    },
+    "corrected N=1,000": {
+      "butterfly": {
+        "snr": 0.0009587464741300309,
+        "snr_masked": 0.001072788667548644,
+        "masked_t": 5.980022070071124,
+        "unmasked_t": 3.7886177436373774
+      },
+      "mem_write": {
+        "snr": 0.01609241045431972,
+        "snr_masked": 0.0029977454537722264,
+        "masked_t": 9.97363920259695,
+        "unmasked_t": 12.01916693884351
+      },
+      "mem_read": {
+        "snr": 0.0014105205405578766,
+        "snr_masked": 0.00017756436890857872,
+        "masked_t": 4.609011840610903,
+        "unmasked_t": 5.315319153259744
+      },
+      "address": {
+        "snr": 0.000414569394008195,
+        "snr_masked": 3.94068102758905e-05,
+        "masked_t": 1.4315134540865384,
+        "unmasked_t": 2.628254034812489
+      },
+      "control": {
+        "snr": 0.0,
+        "snr_masked": 0.0,
+        "masked_t": 0.0,
+        "unmasked_t": 0.0
+      }
+    },
+    "corrected N=10,000": {
+      "butterfly": {
+        "snr": 0.0005178912458383244,
+        "snr_masked": 0.0009184053259308021,
+        "masked_t": 13.17764556713406,
+        "unmasked_t": 7.754561472625316
+      },
+      "mem_write": {
+        "snr": 0.015291361906183578,
+        "snr_masked": 0.003042317870271662,
+        "masked_t": 29.539042843409533,
+        "unmasked_t": 33.93617130433319
+      },
+      "mem_read": {
+        "snr": 0.0009982554967884318,
+        "snr_masked": 9.151716759114311e-05,
+        "masked_t": 7.828231150102539,
+        "unmasked_t": 12.244408861136456
+      },
+      "address": {
+        "snr": 3.704252663227041e-05,
+        "snr_masked": 9.602044963707795e-06,
+        "masked_t": 2.093227672436799,
+        "unmasked_t": 3.281700019601395
+      },
+      "control": {
+        "snr": 0.0,
+        "snr_masked": 0.0,
+        "masked_t": 0.0,
+        "unmasked_t": 0.0
+      }
+    }
+  },
+  "results": {
+    "published N=1,000": {
+      "exp_e": {
+        "mi_per_group": {
+          "butterfly": 0.0009643054013448555,
+          "mem_write": 0.005574136720077748,
+          "mem_read": 0.0011981544922416113
+        },
+        "mi_per_transition": 0.007736596613664215,
+        "mi_per_trace_per_coeff": 0.023209789840992645,
+        "traces_full_recovery": 991
+      },
+      "exp_g_code_807": {
+        "designers_claimed_bits": 46,
+        "scenarios": {
+          "conservative": {
+            "model": "SASCA + Lattice (conservative)",
+            "label": "Conservative (HW-only, no position bias)",
+            "n_traces": 807,
+            "trace_bits": 9.656424863277781,
+            "shuffle_runs": 512,
+            "shuffle_bits": 9.0,
+            "bp_gain_bits": 0.0,
+            "total_mi_bits": 18.730300401681063,
+            "residual_entropy_bits": 4.269699598318937,
+            "error_rate": 0.9481567345720012,
+            "lattice_success": 0.0,
+            "total_enum_bits": 9.0,
+            "complexity_class": "O(N + S_eff x L x BP_cost + lattice)",
+            "gap_vs_designers_bits": 37.0
+          },
+          "moderate": {
+            "model": "SASCA + Lattice (moderate)",
+            "label": "Moderate (profiled, sigma_bias/sigma=0.3)",
+            "n_traces": 823,
+            "trace_bits": 9.684748620421626,
+            "shuffle_runs": 48,
+            "shuffle_bits": 5.584962500721156,
+            "bp_gain_bits": 3.9,
+            "total_mi_bits": 19.101657039136946,
+            "residual_entropy_bits": 0,
+            "error_rate": 0.0,
+            "lattice_success": 1.0,
+            "total_enum_bits": 5.584962500721156,
+            "complexity_class": "O(N + S_eff x L x BP_cost + lattice)",
+            "gap_vs_designers_bits": 40.415037499278846
+          },
+          "aggressive": {
+            "model": "SASCA + Lattice (aggressive)",
+            "label": "Aggressive (profiled, sigma_bias/sigma=0.5+)",
+            "n_traces": 763,
+            "trace_bits": 9.57553924683453,
+            "shuffle_runs": 12,
+            "shuffle_bits": 3.584962500721156,
+            "bp_gain_bits": 5.3,
+            "total_mi_bits": 17.70906964867739,
+            "residual_entropy_bits": 0,
+            "error_rate": 0.0,
+            "lattice_success": 1.0,
+            "total_enum_bits": 3.584962500721156,
+            "complexity_class": "O(N + S_eff x L x BP_cost + lattice)",
+            "gap_vs_designers_bits": 42.415037499278846
+          }
+        }
+      },
+      "exp_g_paper_expE": {
+        "designers_claimed_bits": 46,
+        "scenarios": {
+          "conservative": {
+            "model": "SASCA + Lattice (conservative)",
+            "label": "Conservative (HW-only, no position bias)",
+            "n_traces": 991,
+            "trace_bits": 9.952741247186488,
+            "shuffle_runs": 512,
+            "shuffle_bits": 9.0,
+            "bp_gain_bits": 0.0,
+            "total_mi_bits": 23.00090173242371,
+            "residual_entropy_bits": 0,
+            "error_rate": 0.0,
+            "lattice_success": 1.0,
+            "total_enum_bits": 9.0,
+            "complexity_class": "O(N + S_eff x L x BP_cost + lattice)",
+            "gap_vs_designers_bits": 37.0
+          },
+          "moderate": {
+            "model": "SASCA + Lattice (moderate)",
+            "label": "Moderate (profiled, sigma_bias/sigma=0.3)",
+            "n_traces": 823,
+            "trace_bits": 9.684748620421626,
+            "shuffle_runs": 48,
+            "shuffle_bits": 5.584962500721156,
+            "bp_gain_bits": 3.9,
+            "total_mi_bits": 19.101657039136946,
+            "residual_entropy_bits": 0,
+            "error_rate": 0.0,
+            "lattice_success": 1.0,
+            "total_enum_bits": 5.584962500721156,
+            "complexity_class": "O(N + S_eff x L x BP_cost + lattice)",
+            "gap_vs_designers_bits": 40.415037499278846
+          },
+          "aggressive": {
+            "model": "SASCA + Lattice (aggressive)",
+            "label": "Aggressive (profiled, sigma_bias/sigma=0.5+)",
+            "n_traces": 763,
+            "trace_bits": 9.57553924683453,
+            "shuffle_runs": 12,
+            "shuffle_bits": 3.584962500721156,
+            "bp_gain_bits": 5.3,
+            "total_mi_bits": 17.70906964867739,
+            "residual_entropy_bits": 0,
+            "error_rate": 0.0,
+            "lattice_success": 1.0,
+            "total_enum_bits": 3.584962500721156,
+            "complexity_class": "O(N + S_eff x L x BP_cost + lattice)",
+            "gap_vs_designers_bits": 42.415037499278846
+          }
+        }
+      },
+      "sensitivity": [
+        {
+          "bp_gain_bits": 0.0,
+          "source": "No BP (conservative)",
+          "traces": 991,
+          "shuffle_runs": 512,
+          "gap_vs_2_46_bits": 37.0
+        },
+        {
+          "bp_gain_bits": 1.8,
+          "source": "Worst AB range (ML-KEM)",
+          "traces": 914,
+          "shuffle_runs": 48,
+          "gap_vs_2_46_bits": 40.415037499278846
+        },
+        {
+          "bp_gain_bits": 3.9,
+          "source": "Best AB range (ML-KEM)",
+          "traces": 823,
+          "shuffle_runs": 48,
+          "gap_vs_2_46_bits": 40.415037499278846
+        }
+      ],
+      "exp_f": {
+        "snr_butterfly": 0.0026754101411769747,
+        "reachable_snr_n": {
+          "100": 0.2675410141176975,
+          "10000": 26.754101411769746
+        },
+        "traces_to_reach": {
+          "300": 112132.34015328322,
+          "1000": 373774.4671776107,
+          "3000": 1121323.4015328323,
+          "10000": 3737744.6717761075,
+          "30000": 11213234.015328322
+        }
+      }
+    },
+    "corrected N=1,000": {
+      "exp_e": {
+        "mi_per_group": {
+          "butterfly": 0.0003457118400410627,
+          "mem_write": 0.005780884163128222,
+          "mem_read": 0.000508558435275869
+        },
+        "mi_per_transition": 0.006635154438445153,
+        "mi_per_trace_per_coeff": 0.01990546331533546,
+        "traces_full_recovery": 1156
+      },
+      "exp_g_code_807": {
+        "designers_claimed_bits": 46,
+        "scenarios": {
+          "conservative": {
+            "model": "SASCA + Lattice (conservative)",
+            "label": "Conservative (HW-only, no position bias)",
+            "n_traces": 807,
+            "trace_bits": 9.656424863277781,
+            "shuffle_runs": 512,
+            "shuffle_bits": 9.0,
+            "bp_gain_bits": 0.0,
+            "total_mi_bits": 16.063708895475717,
+            "residual_entropy_bits": 6.936291104524283,
+            "error_rate": 0.9918347719490538,
+            "lattice_success": 0.0,
+            "total_enum_bits": 9.0,
+            "complexity_class": "O(N + S_eff x L x BP_cost + lattice)",
+            "gap_vs_designers_bits": 37.0
+          },
+          "moderate": {
+            "model": "SASCA + Lattice (moderate)",
+            "label": "Moderate (profiled, sigma_bias/sigma=0.3)",
+            "n_traces": 960,
+            "trace_bits": 9.906890595608518,
+            "shuffle_runs": 48,
+            "shuffle_bits": 5.584962500721156,
+            "bp_gain_bits": 3.9,
+            "total_mi_bits": 19.109244782722044,
+            "residual_entropy_bits": 0,
+            "error_rate": 0.0,
+            "lattice_success": 1.0,
+            "total_enum_bits": 5.584962500721156,
+            "complexity_class": "O(N + S_eff x L x BP_cost + lattice)",
+            "gap_vs_designers_bits": 40.415037499278846
+          },
+          "aggressive": {
+            "model": "SASCA + Lattice (aggressive)",
+            "label": "Aggressive (profiled, sigma_bias/sigma=0.5+)",
+            "n_traces": 890,
+            "trace_bits": 9.79766152585376,
+            "shuffle_runs": 12,
+            "shuffle_bits": 3.584962500721156,
+            "bp_gain_bits": 5.3,
+            "total_mi_bits": 17.71586235064856,
+            "residual_entropy_bits": 0,
+            "error_rate": 0.0,
+            "lattice_success": 1.0,
+            "total_enum_bits": 3.584962500721156,
+            "complexity_class": "O(N + S_eff x L x BP_cost + lattice)",
+            "gap_vs_designers_bits": 42.415037499278846
+          }
+        }
+      },
+      "exp_g_paper_expE": {
+        "designers_claimed_bits": 46,
+        "scenarios": {
+          "conservative": {
+            "model": "SASCA + Lattice (conservative)",
+            "label": "Conservative (HW-only, no position bias)",
+            "n_traces": 1156,
+            "trace_bits": 10.174925682500678,
+            "shuffle_runs": 512,
+            "shuffle_bits": 9.0,
+            "bp_gain_bits": 0.0,
+            "total_mi_bits": 23.01071559252779,
+            "residual_entropy_bits": 0,
+            "error_rate": 0.0,
+            "lattice_success": 1.0,
+            "total_enum_bits": 9.0,
+            "complexity_class": "O(N + S_eff x L x BP_cost + lattice)",
+            "gap_vs_designers_bits": 37.0
+          },
+          "moderate": {
+            "model": "SASCA + Lattice (moderate)",
+            "label": "Moderate (profiled, sigma_bias/sigma=0.3)",
+            "n_traces": 960,
+            "trace_bits": 9.906890595608518,
+            "shuffle_runs": 48,
+            "shuffle_bits": 5.584962500721156,
+            "bp_gain_bits": 3.9,
+            "total_mi_bits": 19.109244782722044,
+            "residual_entropy_bits": 0,
+            "error_rate": 0.0,
+            "lattice_success": 1.0,
+            "total_enum_bits": 5.584962500721156,
+            "complexity_class": "O(N + S_eff x L x BP_cost + lattice)",
+            "gap_vs_designers_bits": 40.415037499278846
+          },
+          "aggressive": {
+            "model": "SASCA + Lattice (aggressive)",
+            "label": "Aggressive (profiled, sigma_bias/sigma=0.5+)",
+            "n_traces": 890,
+            "trace_bits": 9.79766152585376,
+            "shuffle_runs": 12,
+            "shuffle_bits": 3.584962500721156,
+            "bp_gain_bits": 5.3,
+            "total_mi_bits": 17.71586235064856,
+            "residual_entropy_bits": 0,
+            "error_rate": 0.0,
+            "lattice_success": 1.0,
+            "total_enum_bits": 3.584962500721156,
+            "complexity_class": "O(N + S_eff x L x BP_cost + lattice)",
+            "gap_vs_designers_bits": 42.415037499278846
+          }
+        }
+      },
+      "sensitivity": [
+        {
+          "bp_gain_bits": 0.0,
+          "source": "No BP (conservative)",
+          "traces": 1156,
+          "shuffle_runs": 512,
+          "gap_vs_2_46_bits": 37.0
+        },
+        {
+          "bp_gain_bits": 1.8,
+          "source": "Worst AB range (ML-KEM)",
+          "traces": 1066,
+          "shuffle_runs": 48,
+          "gap_vs_2_46_bits": 40.415037499278846
+        },
+        {
+          "bp_gain_bits": 3.9,
+          "source": "Best AB range (ML-KEM)",
+          "traces": 960,
+          "shuffle_runs": 48,
+          "gap_vs_2_46_bits": 40.415037499278846
+        }
+      ],
+      "exp_f": {
+        "snr_butterfly": 0.0009587464741300309,
+        "reachable_snr_n": {
+          "100": 0.0958746474130031,
+          "10000": 9.587464741300309
+        },
+        "traces_to_reach": {
+          "300": 312908.58229462674,
+          "1000": 1043028.6076487558,
+          "3000": 3129085.822946267,
+          "10000": 10430286.076487558,
+          "30000": 31290858.229462672
+        }
+      }
+    },
+    "published N=10,000": {
+      "exp_e": {
+        "mi_per_group": {
+          "butterfly": 0.0008401497155578157,
+          "mem_write": 0.00548388470909526,
+          "mem_read": 0.0010939303634737824
+        },
+        "mi_per_transition": 0.007417964788126858,
+        "mi_per_trace_per_coeff": 0.022253894364380574,
+        "traces_full_recovery": 1034
+      },
+      "exp_g_code_807": {
+        "designers_claimed_bits": 46,
+        "scenarios": {
+          "conservative": {
+            "model": "SASCA + Lattice (conservative)",
+            "label": "Conservative (HW-only, no position bias)",
+            "n_traces": 807,
+            "trace_bits": 9.656424863277781,
+            "shuffle_runs": 512,
+            "shuffle_bits": 9.0,
+            "bp_gain_bits": 0.0,
+            "total_mi_bits": 17.958892752055124,
+            "residual_entropy_bits": 5.0411072479448755,
+            "error_rate": 0.9696278520327877,
+            "lattice_success": 0.0,
+            "total_enum_bits": 9.0,
+            "complexity_class": "O(N + S_eff x L x BP_cost + lattice)",
+            "gap_vs_designers_bits": 37.0
+          },
+          "moderate": {
+            "model": "SASCA + Lattice (moderate)",
+            "label": "Moderate (profiled, sigma_bias/sigma=0.3)",
+            "n_traces": 859,
+            "trace_bits": 9.746514321138463,
+            "shuffle_runs": 48,
+            "shuffle_bits": 5.584962500721156,
+            "bp_gain_bits": 3.9,
+            "total_mi_bits": 19.116095259002915,
+            "residual_entropy_bits": 0,
+            "error_rate": 0.0,
+            "lattice_success": 1.0,
+            "total_enum_bits": 5.584962500721156,
+            "complexity_class": "O(N + S_eff x L x BP_cost + lattice)",
+            "gap_vs_designers_bits": 40.415037499278846
+          },
+          "aggressive": {
+            "model": "SASCA + Lattice (aggressive)",
+            "label": "Aggressive (profiled, sigma_bias/sigma=0.5+)",
+            "n_traces": 796,
+            "trace_bits": 9.63662462054365,
+            "shuffle_runs": 12,
+            "shuffle_bits": 3.584962500721156,
+            "bp_gain_bits": 5.3,
+            "total_mi_bits": 17.714099914046937,
+            "residual_entropy_bits": 0,
+            "error_rate": 0.0,
+            "lattice_success": 1.0,
+            "total_enum_bits": 3.584962500721156,
+            "complexity_class": "O(N + S_eff x L x BP_cost + lattice)",
+            "gap_vs_designers_bits": 42.415037499278846
+          }
+        }
+      },
+      "exp_g_paper_expE": {
+        "designers_claimed_bits": 46,
+        "scenarios": {
+          "conservative": {
+            "model": "SASCA + Lattice (conservative)",
+            "label": "Conservative (HW-only, no position bias)",
+            "n_traces": 1034,
+            "trace_bits": 10.014020470314934,
+            "shuffle_runs": 512,
+            "shuffle_bits": 9.0,
+            "bp_gain_bits": 0.0,
+            "total_mi_bits": 23.010526772769513,
+            "residual_entropy_bits": 0,
+            "error_rate": 0.0,
+            "lattice_success": 1.0,
+            "total_enum_bits": 9.0,
+            "complexity_class": "O(N + S_eff x L x BP_cost + lattice)",
+            "gap_vs_designers_bits": 37.0
+          },
+          "moderate": {
+            "model": "SASCA + Lattice (moderate)",
+            "label": "Moderate (profiled, sigma_bias/sigma=0.3)",
+            "n_traces": 859,
+            "trace_bits": 9.746514321138463,
+            "shuffle_runs": 48,
+            "shuffle_bits": 5.584962500721156,
+            "bp_gain_bits": 3.9,
+            "total_mi_bits": 19.116095259002915,
+            "residual_entropy_bits": 0,
+            "error_rate": 0.0,
+            "lattice_success": 1.0,
+            "total_enum_bits": 5.584962500721156,
+            "complexity_class": "O(N + S_eff x L x BP_cost + lattice)",
+            "gap_vs_designers_bits": 40.415037499278846
+          },
+          "aggressive": {
+            "model": "SASCA + Lattice (aggressive)",
+            "label": "Aggressive (profiled, sigma_bias/sigma=0.5+)",
+            "n_traces": 796,
+            "trace_bits": 9.63662462054365,
+            "shuffle_runs": 12,
+            "shuffle_bits": 3.584962500721156,
+            "bp_gain_bits": 5.3,
+            "total_mi_bits": 17.714099914046937,
+            "residual_entropy_bits": 0,
+            "error_rate": 0.0,
+            "lattice_success": 1.0,
+            "total_enum_bits": 3.584962500721156,
+            "complexity_class": "O(N + S_eff x L x BP_cost + lattice)",
+            "gap_vs_designers_bits": 42.415037499278846
+          }
+        }
+      },
+      "sensitivity": [
+        {
+          "bp_gain_bits": 0.0,
+          "source": "No BP (conservative)",
+          "traces": 1034,
+          "shuffle_runs": 512,
+          "gap_vs_2_46_bits": 37.0
+        },
+        {
+          "bp_gain_bits": 1.8,
+          "source": "Worst AB range (ML-KEM)",
+          "traces": 953,
+          "shuffle_runs": 48,
+          "gap_vs_2_46_bits": 40.415037499278846
+        },
+        {
+          "bp_gain_bits": 3.9,
+          "source": "Best AB range (ML-KEM)",
+          "traces": 859,
+          "shuffle_runs": 48,
+          "gap_vs_2_46_bits": 40.415037499278846
+        }
+      ],
+      "exp_f": {
+        "snr_butterfly": 0.0023307466671513358,
+        "reachable_snr_n": {
+          "100": 0.23307466671513358,
+          "10000": 23.307466671513357
+        },
+        "traces_to_reach": {
+          "300": 128714.11733762696,
+          "1000": 429047.0577920899,
+          "3000": 1287141.1733762696,
+          "10000": 4290470.577920899,
+          "30000": 12871411.733762696
+        }
+      }
+    },
+    "corrected N=10,000": {
+      "exp_e": {
+        "mi_per_group": {
+          "butterfly": 0.00018676560299845353,
+          "mem_write": 0.005494216148279194,
+          "mem_read": 0.000359954739460866
+        },
+        "mi_per_transition": 0.006040936490738513,
+        "mi_per_trace_per_coeff": 0.01812280947221554,
+        "traces_full_recovery": 1270
+      },
+      "exp_g_code_807": {
+        "designers_claimed_bits": 46,
+        "scenarios": {
+          "conservative": {
+            "model": "SASCA + Lattice (conservative)",
+            "label": "Conservative (HW-only, no position bias)",
+            "n_traces": 807,
+            "trace_bits": 9.656424863277781,
+            "shuffle_runs": 512,
+            "shuffle_bits": 9.0,
+            "bp_gain_bits": 0.0,
+            "total_mi_bits": 14.625107244077942,
+            "residual_entropy_bits": 8.374892755922058,
+            "error_rate": 0.9969876455637785,
+            "lattice_success": 0.0,
+            "total_enum_bits": 9.0,
+            "complexity_class": "O(N + S_eff x L x BP_cost + lattice)",
+            "gap_vs_designers_bits": 37.0
+          },
+          "moderate": {
+            "model": "SASCA + Lattice (moderate)",
+            "label": "Moderate (profiled, sigma_bias/sigma=0.3)",
+            "n_traces": 1054,
+            "trace_bits": 10.041659151637214,
+            "shuffle_runs": 48,
+            "shuffle_bits": 5.584962500721156,
+            "bp_gain_bits": 3.9,
+            "total_mi_bits": 19.10144118371518,
+            "residual_entropy_bits": 0,
+            "error_rate": 0.0,
+            "lattice_success": 1.0,
+            "total_enum_bits": 5.584962500721156,
+            "complexity_class": "O(N + S_eff x L x BP_cost + lattice)",
+            "gap_vs_designers_bits": 40.415037499278846
+          },
+          "aggressive": {
+            "model": "SASCA + Lattice (aggressive)",
+            "label": "Aggressive (profiled, sigma_bias/sigma=0.5+)",
+            "n_traces": 977,
+            "trace_bits": 9.932214751968385,
+            "shuffle_runs": 12,
+            "shuffle_bits": 3.584962500721156,
+            "bp_gain_bits": 5.3,
+            "total_mi_bits": 17.705984854354583,
+            "residual_entropy_bits": 0,
+            "error_rate": 0.0,
+            "lattice_success": 1.0,
+            "total_enum_bits": 3.584962500721156,
+            "complexity_class": "O(N + S_eff x L x BP_cost + lattice)",
+            "gap_vs_designers_bits": 42.415037499278846
+          }
+        }
+      },
+      "exp_g_paper_expE": {
+        "designers_claimed_bits": 46,
+        "scenarios": {
+          "conservative": {
+            "model": "SASCA + Lattice (conservative)",
+            "label": "Conservative (HW-only, no position bias)",
+            "n_traces": 1270,
+            "trace_bits": 10.310612781659529,
+            "shuffle_runs": 512,
+            "shuffle_bits": 9.0,
+            "bp_gain_bits": 0.0,
+            "total_mi_bits": 23.015968029713736,
+            "residual_entropy_bits": 0,
+            "error_rate": 0.0,
+            "lattice_success": 1.0,
+            "total_enum_bits": 9.0,
+            "complexity_class": "O(N + S_eff x L x BP_cost + lattice)",
+            "gap_vs_designers_bits": 37.0
+          },
+          "moderate": {
+            "model": "SASCA + Lattice (moderate)",
+            "label": "Moderate (profiled, sigma_bias/sigma=0.3)",
+            "n_traces": 1054,
+            "trace_bits": 10.041659151637214,
+            "shuffle_runs": 48,
+            "shuffle_bits": 5.584962500721156,
+            "bp_gain_bits": 3.9,
+            "total_mi_bits": 19.10144118371518,
+            "residual_entropy_bits": 0,
+            "error_rate": 0.0,
+            "lattice_success": 1.0,
+            "total_enum_bits": 5.584962500721156,
+            "complexity_class": "O(N + S_eff x L x BP_cost + lattice)",
+            "gap_vs_designers_bits": 40.415037499278846
+          },
+          "aggressive": {
+            "model": "SASCA + Lattice (aggressive)",
+            "label": "Aggressive (profiled, sigma_bias/sigma=0.5+)",
+            "n_traces": 977,
+            "trace_bits": 9.932214751968385,
+            "shuffle_runs": 12,
+            "shuffle_bits": 3.584962500721156,
+            "bp_gain_bits": 5.3,
+            "total_mi_bits": 17.705984854354583,
+            "residual_entropy_bits": 0,
+            "error_rate": 0.0,
+            "lattice_success": 1.0,
+            "total_enum_bits": 3.584962500721156,
+            "complexity_class": "O(N + S_eff x L x BP_cost + lattice)",
+            "gap_vs_designers_bits": 42.415037499278846
+          }
+        }
+      },
+      "sensitivity": [
+        {
+          "bp_gain_bits": 0.0,
+          "source": "No BP (conservative)",
+          "traces": 1270,
+          "shuffle_runs": 512,
+          "gap_vs_2_46_bits": 37.0
+        },
+        {
+          "bp_gain_bits": 1.8,
+          "source": "Worst AB range (ML-KEM)",
+          "traces": 1170,
+          "shuffle_runs": 48,
+          "gap_vs_2_46_bits": 40.415037499278846
+        },
+        {
+          "bp_gain_bits": 3.9,
+          "source": "Best AB range (ML-KEM)",
+          "traces": 1054,
+          "shuffle_runs": 48,
+          "gap_vs_2_46_bits": 40.415037499278846
+        }
+      ],
+      "exp_f": {
+        "snr_butterfly": 0.0005178912458383244,
+        "reachable_snr_n": {
+          "100": 0.05178912458383245,
+          "10000": 5.178912458383245
+        },
+        "traces_to_reach": {
+          "300": 579272.1974173979,
+          "1000": 1930907.3247246596,
+          "3000": 5792721.974173979,
+          "10000": 19309073.247246593,
+          "30000": 57927219.74173979
+        }
+      }
+    }
+  }
+}

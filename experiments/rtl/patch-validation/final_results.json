@@ -1,0 +1,136 @@
+{
+  "A_published": {
+    "masked_end": 345,
+    "n1000": {
+      "Butterfly": {
+        "snr_masked": 0.00017256876941572493,
+        "snr_unmasked": 0.0026754101411769747,
+        "max_t_masked": 3.35824101001014,
+        "max_t_unmasked": 6.338083696248879
+      },
+      "Mem Write": {
+        "snr_masked": 0.005640486081926045,
+        "snr_unmasked": 0.01551465533427962,
+        "max_t_masked": 14.264541490646772,
+        "max_t_unmasked": 13.169125599958768
+      },
+      "Mem Read": {
+        "snr_masked": 0.0018189410549118833,
+        "snr_unmasked": 0.0033247500646127115,
+        "max_t_masked": 7.0882330595864405,
+        "max_t_unmasked": 5.618057724709715
+      },
+      "Address": {
+        "snr_masked": 3.94068102758905e-05,
+        "snr_unmasked": 0.000414569394008195,
+        "max_t_masked": 1.4315134540865384,
+        "max_t_unmasked": 2.628254034812489
+      },
+      "Control": {
+        "snr_masked": 0.0,
+        "snr_unmasked": 0.0,
+        "max_t_masked": 0.0,
+        "max_t_unmasked": 0.0
+      }
+    },
+    "n10000": {
+      "Butterfly": {
+        "snr_masked": 5.00455509666842e-05,
+        "snr_unmasked": 0.0023307466671513358,
+        "max_t_masked": 6.532483057179657,
+        "max_t_unmasked": 15.518260193608368
+      },
+      "Mem Write": {
+        "snr_masked": 0.005560663663903786,
+        "snr_unmasked": 0.015262498271872286,
+        "max_t_masked": 43.75896789871266,
+        "max_t_unmasked": 37.385543213172845
+      },
+      "Mem Read": {
+        "snr_masked": 0.0018225397099772846,
+        "snr_unmasked": 0.0030353199527271215,
+        "max_t_masked": 18.257791387840456,
+        "max_t_unmasked": 15.683160730746518
+      },
+      "Address": {
+        "snr_masked": 9.602044963707795e-06,
+        "snr_unmasked": 3.704252663227041e-05,
+        "max_t_masked": 2.093227672436799,
+        "max_t_unmasked": 3.281700019601395
+      },
+      "Control": {
+        "snr_masked": 0.0,
+        "snr_unmasked": 0.0,
+        "max_t_masked": 0.0,
+        "max_t_unmasked": 0.0
+      }
+    }
+  },
+  "B_corrected": {
+    "masked_end": 345,
+    "n1000": {
+      "Butterfly": {
+        "snr_masked": 0.001072788667548644,
+        "snr_unmasked": 0.0009587464741300309,
+        "max_t_masked": 5.980022070071124,
+        "max_t_unmasked": 3.7886177436373774
+      },
+      "Mem Write": {
+        "snr_masked": 0.0029977454537722264,
+        "snr_unmasked": 0.01609241045431972,
+        "max_t_masked": 9.97363920259695,
+        "max_t_unmasked": 12.01916693884351
+      },
+      "Mem Read": {
+        "snr_masked": 0.00017756436890857872,
+        "snr_unmasked": 0.0014105205405578766,
+        "max_t_masked": 4.609011840610903,
+        "max_t_unmasked": 5.315319153259744
+      },
+      "Address": {
+        "snr_masked": 3.94068102758905e-05,
+        "snr_unmasked": 0.000414569394008195,
+        "max_t_masked": 1.4315134540865384,
+        "max_t_unmasked": 2.628254034812489
+      },
+      "Control": {
+        "snr_masked": 0.0,
+        "snr_unmasked": 0.0,
+        "max_t_masked": 0.0,
+        "max_t_unmasked": 0.0
+      }
+    },
+    "n10000": {
+      "Butterfly": {
+        "snr_masked": 0.0009184053259308021,
+        "snr_unmasked": 0.0005178912458383244,
+        "max_t_masked": 13.17764556713406,
+        "max_t_unmasked": 7.754561472625316
+      },
+      "Mem Write": {
+        "snr_masked": 0.003042317870271662,
+        "snr_unmasked": 0.015291361906183578,
+        "max_t_masked": 29.539042843409533,
+        "max_t_unmasked": 33.93617130433319
+      },
+      "Mem Read": {
+        "snr_masked": 9.151716759114311e-05,
+        "snr_unmasked": 0.0009982554967884318,
+        "max_t_masked": 7.828231150102539,
+        "max_t_unmasked": 12.244408861136456
+      },
+      "Address": {
+        "snr_masked": 9.602044963707795e-06,
+        "snr_unmasked": 3.704252663227041e-05,
+        "max_t_masked": 2.093227672436799,
+        "max_t_unmasked": 3.281700019601395
+      },
+      "Control": {
+        "snr_masked": 0.0,
+        "snr_unmasked": 0.0,
+        "max_t_masked": 0.0,
+        "max_t_unmasked": 0.0
+      }
+    }
+  }
+}

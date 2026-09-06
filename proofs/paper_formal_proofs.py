@@ -1081,13 +1081,18 @@ def prove_T18_mi_formula_chain():
     Verify the MI→traces arithmetic chain from §4.8.5 (Exp E).
 
     The paper states (worked example):
-      - Butterfly MI = 0.000963, Mem-write MI = 0.005555, Mem-read MI = 0.001215
-      - Sum = 0.007733 bits per register-group transition
-      - × 3 transitions per layer = 0.023198 bits per trace per coefficient
-      - ceil(23.0 / 0.023198) = 992 traces
+      - Butterfly MI = 0.000973, Mem-write MI = 0.005569, Mem-read MI = 0.001189
+      - Sum = 0.007731 bits per register-group transition
+      - × 3 transitions per layer = 0.023194 bits per trace per coefficient
+      - ceil(23.0 / 0.023194) = 992 traces
+
+    CORRECTED 2026-08-30. Until then this theorem asserted the v1--v2 components
+    0.000963 / 0.005555 / 0.001215, which reproduce from NO SNR set on disk: they had
+    been back-fitted to a target sum. The proof was sound and its premise was false,
+    and because the suite hardcoded them the pipeline ENFORCED the wrong numbers.
 
     The displayed values are rounded to 6 decimal places. The exact (unrounded)
-    values sum to 0.023198253..., which rounds to 0.023198 as stated. We verify
+    values sum to 0.023193889..., which rounds to 0.023194 as stated. We verify
     both the rounded arithmetic and the trace count at unrounded precision.
 
     The Gaussian capacity formula ½log₂(1+SNR/2) that produces these MI values
@@ -1099,22 +1104,22 @@ def prove_T18_mi_formula_chain():
     # Part 1: Rounded display values are arithmetically consistent
     # MI components at 10^6 scale (as displayed in paper)
     s1 = z3.Solver()
-    mi_bfly = z3.IntVal(963)    # 0.000963
-    mi_mwr  = z3.IntVal(5555)   # 0.005555
-    mi_mrd  = z3.IntVal(1215)   # 0.001215
+    mi_bfly = z3.IntVal(973)    # 0.000973 = 0.5*log2(1 + 0.0027/2)
+    mi_mwr  = z3.IntVal(5569)   # 0.005569 = 0.5*log2(1 + 0.0155/2)
+    mi_mrd  = z3.IntVal(1189)   # 0.001189 = 0.5*log2(1 + 0.0033/2)
     s1.add(z3.Not(z3.And(
-        mi_bfly + mi_mwr + mi_mrd == 7733,   # sum as displayed
-        (mi_bfly + mi_mwr + mi_mrd) * 3 == 23199,  # ×3 transitions
+        mi_bfly + mi_mwr + mi_mrd == 7731,   # sum as displayed
+        (mi_bfly + mi_mwr + mi_mrd) * 3 == 23193,  # ×3 transitions
     )))
     r1, t1, cex1 = prove_unsat(s1, "T18_display")
 
     # Part 2: Trace count from unrounded precision
-    # Exact MI per trace = 0.023198253... (from Python math.log2)
-    # At 10^9 scale: 23198253
-    # ceil(23.0 / 0.023198253) = ceil(991.498...) = 992
-    # Verify: 991 × 23198253 < 23000000000 ≤ 992 × 23198253
+    # Exact MI per trace = 0.023193889... (from Python math.log2)
+    # At 10^9 scale: 23193890
+    # ceil(23.0 / 0.023193890) = ceil(991.639...) = 992
+    # Verify: 991 × 23193890 < 23000000000 ≤ 992 × 23193890
     s2 = z3.Solver()
-    mi_exact_1e9 = z3.IntVal(23_198_253)  # 0.023198253 × 10^9
+    mi_exact_1e9 = z3.IntVal(23_193_890)  # 0.023193890 × 10^9
     entropy_1e9 = z3.IntVal(23_000_000_000)  # 23.0 × 10^9
     s2.add(z3.Not(z3.And(
         z3.IntVal(991) * mi_exact_1e9 < entropy_1e9,    # 991 traces not enough
@@ -1123,12 +1128,12 @@ def prove_T18_mi_formula_chain():
     r2, t2, cex2 = prove_unsat(s2, "T18_traces")
 
     # Part 3: Displayed "0.023198" is consistent with exact value
-    # 0.023198253 rounds to 0.023198 (truncation at 6 decimal places)
-    # Verify: 23198000 ≤ 23198253 < 23199000
+    # 0.023193890 rounds to 0.023194 (round-to-nearest at 6 decimal places)
+    # Verify: 23193500 ≤ 23193890 < 23194500
     s3 = z3.Solver()
     s3.add(z3.Not(z3.And(
-        z3.IntVal(23_198_000) <= z3.IntVal(23_198_253),
-        z3.IntVal(23_198_253) < z3.IntVal(23_199_000),
+        z3.IntVal(23_193_500) <= z3.IntVal(23_193_890),
+        z3.IntVal(23_193_890) < z3.IntVal(23_194_500),
     )))
     r3, t3, cex3 = prove_unsat(s3, "T18_rounding")
 
@@ -1140,15 +1145,15 @@ def prove_T18_mi_formula_chain():
         theorem_id="T18", tier="B",
         name="MI Arithmetic Chain (Exp E)",
         claim=(
-            "MI components 0.000963+0.005555+0.001215 = 0.007733; "
-            "×3 = 0.023199 (displayed 0.023198); ceil(23.0/0.023198) = 992 traces"
+            "MI components 0.000973+0.005569+0.001189 = 0.007731; "
+            "×3 = 0.023193 (displayed 0.023194); ceil(23.0/0.023194) = 992 traces"
         ),
         paper_ref="§4.8.5, Exp E",
         z3_result=combined_result, z3_time_ms=combined_time,
         assertion_text=(
-            "Part 1: 963+5555+1215=7733, ×3=23199 (display arithmetic). "
-            "Part 2: 991×23198253 < 23×10^9 ≤ 992×23198253 (trace count from exact MI). "
-            "Part 3: 23198253 rounds to 0.023198 (6 d.p. truncation)."
+            "Part 1: 973+5569+1189=7731, ×3=23193 (display arithmetic). "
+            "Part 2: 991×23193890 < 23×10^9 ≤ 992×23193890 (trace count from exact MI). "
+            "Part 3: 23193890 rounds to 0.023194 (6 d.p. round-to-nearest)."
         ),
         counterexample=combined_cex,
         notes=(
@@ -1156,65 +1161,6 @@ def prove_T18_mi_formula_chain():
             "The Gaussian capacity formula ½log₂(1+SNR/2) that produces the MI components "
             "is transcendental and beyond SMT verification; validated by Shannon (1948)."
         ),
-    ))
-
-
-# ===========================================================================
-# TIER C: IMPORTED PROOF (NC3)
-# ===========================================================================
-def import_nc3():
-    """
-    Import NC3 formal proof results from nc3_fourier_contraction.py.
-    Verify parameter consistency with this proof suite.
-    """
-    nc3_path = Path(__file__).parent / "nc3_fourier_contraction.py"
-    repo_root = Path(__file__).parent.parent
-
-    # Check NC3 evidence file
-    nc3_evidence_candidates = [
-        repo_root / "evidence" / "nc3_proof.json",
-        Path(__file__).parent / "nc3_proof.json",
-        repo_root / "evidence" / "nc3_fourier_proof.json",
-    ]
-
-    nc3_data = None
-    for p in nc3_evidence_candidates:
-        if p.exists():
-            with open(p) as f:
-                nc3_data = json.load(f)
-            break
-
-    if nc3_data is None:
-        record(TheoremResult(
-            theorem_id="NC3",
-            tier="C",
-            name="NC3 Fourier Contraction (imported)",
-            claim="Gap ≥ 3 kills BP recovery",
-            paper_ref="§4.8.9, NC3",
-            z3_result="not_found",
-            z3_time_ms=0,
-            assertion_text="NC3 evidence file not found — run nc3_fourier_contraction.py first",
-        ))
-        return
-
-    # Parameter consistency check
-    s = z3.Solver()
-    # NC3 uses q=3329 (ML-KEM) — must match our Q_MLKEM
-    s.add(z3.Not(z3.IntVal(Q_MLKEM) == 3329))
-    r, t, cex = prove_unsat(s, "NC3_param_check")
-
-    nc3_passed = nc3_data.get("all_passed", nc3_data.get("result", "unknown"))
-
-    record(TheoremResult(
-        theorem_id="NC3",
-        tier="C",
-        name="NC3 Fourier Contraction (imported)",
-        claim="Gap ≥ 3 in GS INTT factor graph kills BP recovery (Fisher p=0.0083)",
-        paper_ref="§4.8.9, NC3",
-        z3_result="unsat" if nc3_passed else "imported_unverified",
-        z3_time_ms=t,
-        assertion_text="Imported from nc3_fourier_contraction.py; parameter q=3329 consistent.",
-        notes=f"NC3 evidence: {nc3_data.get('fisher_p', 'N/A')}",
     ))
 
 
@@ -1341,10 +1287,6 @@ def main():
     prove_T14_scenario_c()
     prove_T17_masking_overhead()
     prove_T18_mi_formula_chain()
-
-    # --- Tier C: Imported ---
-    print("\n--- TIER C: Imported Proofs ---")
-    import_nc3()
 
     # --- Summary ---
     total_time = time.perf_counter() - t_start

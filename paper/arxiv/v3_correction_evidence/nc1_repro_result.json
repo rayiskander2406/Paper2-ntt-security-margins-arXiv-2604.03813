@@ -1,0 +1,77 @@
+[
+  {
+    "label": "control_default_tol",
+    "seed": 3003270,
+    "observe_layers": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "snr_n": 50000,
+    "convergence_tol": 0.0001,
+    "max_iter": 50,
+    "bp_iterations": 1,
+    "time_s": 10.9,
+    "l0_correct": 0,
+    "l0_bsr": 0.0,
+    "mid_layer_bsr": 0.7188,
+    "entropy_history": [
+      11.701
+    ]
+  },
+  {
+    "label": "forced_no_earlyexit",
+    "seed": 3003270,
+    "observe_layers": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "snr_n": 50000,
+    "convergence_tol": -1.0,
+    "max_iter": 30,
+    "bp_iterations": 30,
+    "time_s": 325.0,
+    "l0_correct": 256,
+    "l0_bsr": 1.0,
+    "mid_layer_bsr": 1.0,
+    "entropy_history": [
+      11.701,
+      11.701,
+      11.679,
+      11.486,
+      10.883,
+      9.784,
+      8.339,
+      6.78,
+      5.299,
+      4.008,
+      2.95,
+      2.122,
+      1.496,
+      1.037,
+      0.708,
+      0.476,
+      0.316,
+      0.207,
+      0.135,
+      0.087,
+      0.055,
+      0.035,
+      0.022,
+      0.013,
+      0.008,
+      0.005,
+      0.003,
+      0.002,
+      0.001,
+      0.001
+    ]
+  }
+]

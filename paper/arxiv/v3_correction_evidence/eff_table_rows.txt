@@ -1,0 +1,76 @@
+# BP-efficiency table and near-threshold cross-check, recomputed from the archived corrected-criterion runs
+# (eff_sweep_results.jsonl: 10 seeds per point, cap 120, tol 1e-4; 5,000 point: rederivation_results.json corrected runs)
+# one numeric token per value line
+
+eff_500_n_seeds = 10
+eff_500_full_key = 0/10
+eff_500_mi_bp = 0.94
+eff_500_efficiency_pct = 8.0%
+eff_500_efficiency_pct_rounded = 8%
+eff_500_mi_1layer = 4.23
+eff_500_iters = 120--120
+
+eff_1000_n_seeds = 10
+eff_1000_full_key = 3/10
+eff_1000_mi_bp = 10.09
+eff_1000_efficiency_pct = 86.2%
+eff_1000_efficiency_pct_rounded = 86%
+eff_1000_mi_1layer = 4.73
+eff_1000_iters = 54--108
+
+eff_1500_n_seeds = 10
+eff_1500_full_key = 5/10
+eff_1500_mi_bp = 10.72
+eff_1500_efficiency_pct = 91.6%
+eff_1500_efficiency_pct_rounded = 92%
+eff_1500_mi_1layer = 5.02
+eff_1500_iters = 48--57
+
+eff_2000_n_seeds = 10
+eff_2000_full_key = 8/10
+eff_2000_mi_bp = 11.10
+eff_2000_efficiency_pct = 94.9%
+eff_2000_efficiency_pct_rounded = 95%
+eff_2000_mi_1layer = 5.23
+eff_2000_iters = 42--52
+
+eff_3000_n_seeds = 10
+eff_3000_full_key = 9/10
+eff_3000_mi_bp = 11.47
+eff_3000_efficiency_pct = 98.0%
+eff_3000_efficiency_pct_rounded = 98%
+eff_3000_mi_1layer = 5.52
+eff_3000_iters = 40--48
+
+eff_5000_n_seeds = 24
+eff_5000_full_key = 24/24
+eff_5000_mi_bp = 11.67
+eff_5000_efficiency_pct = 99.7%
+eff_5000_efficiency_pct_rounded = 100%
+eff_5000_mi_1layer = 5.89
+eff_5000_iters = 35--51
+
+eff_10000_n_seeds = 10
+eff_10000_full_key = 10/10
+eff_10000_mi_bp = 11.70
+eff_10000_efficiency_pct = 100.0%
+eff_10000_efficiency_pct_rounded = 100%
+eff_10000_mi_1layer = 6.39
+eff_10000_iters = 32--41
+
+x3k_spread_full_key = 9/10
+x3k_spread_mi_bp = 11.47
+x3k_spread_wilson_lo = 59.6%
+x3k_spread_wilson_hi = 98.2%
+x3k_L1L4_full_key = 0/10
+x3k_L1L4_mi_bp = 5.98
+x3k_L1L4_wilson_lo = 0.0%
+x3k_L1L4_wilson_hi = 27.8%
+x3k_L1L6_full_key = 0/10
+x3k_L1L6_mi_bp = 10.21
+x3k_L1L6_wilson_lo = 0.0%
+x3k_L1L6_wilson_hi = 27.8%
+x2k_spread_full_key = 8/10
+x2k_spread_mi_bp = 11.10
+x2k_spread_wilson_lo = 49.0%
+x2k_spread_wilson_hi = 94.3%

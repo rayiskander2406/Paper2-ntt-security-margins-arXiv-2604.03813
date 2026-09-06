@@ -2,9 +2,34 @@ __pycache__/
 *.pyc
 *.egg-info/
 dist/
-build/
+/build/
 venv/
 .venv/
 *.json.bak
 .DS_Store
 .envrc
+
+# BP sweep / probe run junk (results are captured in the committed evidence JSONs)
+paper/arxiv/v3_correction_evidence/*.log
+paper/arxiv/v3_correction_evidence/*.err
+
+# ...but trust-gate logs are VERIFICATION EVIDENCE, not run junk: they are the only
+# record that `rederive.py gate` actually passed (control_A 256/256, control_B unharmed,
+# determinism identical) before a sweep's numbers were quoted. ~1.4 KB each.
+!paper/arxiv/v3_correction_evidence/*_GATE_*.log
+!paper/arxiv/v3_correction_evidence/*_GATE.log
+
+# Derived PDF/docx builds of the manuscript: source.md is the deliverable and these are
+# rebuildable from it, so they are not committed.
+paper/manuscripts/*/[vV]*_REVIEW_DRAFT_*.pdf
+paper/manuscripts/*/[vV]*_REVIEW_DRAFT_*.docx
+
+# Intermediate/regenerated docx artifacts of paper/build
+paper/manuscripts/*/camera_ready.docx
+paper/build/reference.docx
+paper/build/build_v3.0.log
+paper/build/__pycache__/
+
+# recovery_curve_gap_configs.pdf is rewritten with a fresh CreationDate on every aggregate_transition.py run;
+# the .png is the tracked figure
+paper/arxiv/v3_correction_evidence/recovery_curve_gap_configs.pdf

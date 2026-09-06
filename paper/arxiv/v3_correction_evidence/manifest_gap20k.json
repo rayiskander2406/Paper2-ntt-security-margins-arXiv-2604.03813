@@ -1,0 +1,542 @@
+[
+ {
+  "config": "L1+L2+L3+L7",
+  "layers": [
+   1,
+   2,
+   3,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 12321,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 0
+ },
+ {
+  "config": "L1+L2+L6+L7",
+  "layers": [
+   1,
+   2,
+   6,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 12621,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 0
+ },
+ {
+  "config": "L1+L5+L6+L7",
+  "layers": [
+   1,
+   5,
+   6,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 12651,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 0
+ },
+ {
+  "config": "L1+L2+L3+L7",
+  "layers": [
+   1,
+   2,
+   3,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 112321,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 1
+ },
+ {
+  "config": "L1+L2+L6+L7",
+  "layers": [
+   1,
+   2,
+   6,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 112621,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 1
+ },
+ {
+  "config": "L1+L5+L6+L7",
+  "layers": [
+   1,
+   5,
+   6,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 112651,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 1
+ },
+ {
+  "config": "L1+L2+L3+L7",
+  "layers": [
+   1,
+   2,
+   3,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 212321,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 2
+ },
+ {
+  "config": "L1+L2+L6+L7",
+  "layers": [
+   1,
+   2,
+   6,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 212621,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 2
+ },
+ {
+  "config": "L1+L5+L6+L7",
+  "layers": [
+   1,
+   5,
+   6,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 212651,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 2
+ },
+ {
+  "config": "L1+L2+L3+L7",
+  "layers": [
+   1,
+   2,
+   3,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 312321,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 3
+ },
+ {
+  "config": "L1+L2+L6+L7",
+  "layers": [
+   1,
+   2,
+   6,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 312621,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 3
+ },
+ {
+  "config": "L1+L5+L6+L7",
+  "layers": [
+   1,
+   5,
+   6,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 312651,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 3
+ },
+ {
+  "config": "L1+L2+L3+L7",
+  "layers": [
+   1,
+   2,
+   3,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 412321,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 4
+ },
+ {
+  "config": "L1+L2+L6+L7",
+  "layers": [
+   1,
+   2,
+   6,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 412621,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 4
+ },
+ {
+  "config": "L1+L5+L6+L7",
+  "layers": [
+   1,
+   5,
+   6,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 412651,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 4
+ },
+ {
+  "config": "L1+L2+L3+L7",
+  "layers": [
+   1,
+   2,
+   3,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 512321,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 5
+ },
+ {
+  "config": "L1+L2+L6+L7",
+  "layers": [
+   1,
+   2,
+   6,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 512621,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 5
+ },
+ {
+  "config": "L1+L5+L6+L7",
+  "layers": [
+   1,
+   5,
+   6,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 512651,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 5
+ },
+ {
+  "config": "L1+L2+L3+L7",
+  "layers": [
+   1,
+   2,
+   3,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 612321,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 6
+ },
+ {
+  "config": "L1+L2+L6+L7",
+  "layers": [
+   1,
+   2,
+   6,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 612621,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 6
+ },
+ {
+  "config": "L1+L5+L6+L7",
+  "layers": [
+   1,
+   5,
+   6,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 612651,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 6
+ },
+ {
+  "config": "L1+L2+L3+L7",
+  "layers": [
+   1,
+   2,
+   3,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 712321,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 7
+ },
+ {
+  "config": "L1+L2+L6+L7",
+  "layers": [
+   1,
+   2,
+   6,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 712621,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 7
+ },
+ {
+  "config": "L1+L5+L6+L7",
+  "layers": [
+   1,
+   5,
+   6,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 712651,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 7
+ },
+ {
+  "config": "L1+L2+L3+L7",
+  "layers": [
+   1,
+   2,
+   3,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 812321,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 8
+ },
+ {
+  "config": "L1+L2+L6+L7",
+  "layers": [
+   1,
+   2,
+   6,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 812621,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 8
+ },
+ {
+  "config": "L1+L5+L6+L7",
+  "layers": [
+   1,
+   5,
+   6,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 812651,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 8
+ },
+ {
+  "config": "L1+L2+L3+L7",
+  "layers": [
+   1,
+   2,
+   3,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 912321,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 9
+ },
+ {
+  "config": "L1+L2+L6+L7",
+  "layers": [
+   1,
+   2,
+   6,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 912621,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 9
+ },
+ {
+  "config": "L1+L5+L6+L7",
+  "layers": [
+   1,
+   5,
+   6,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 912651,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 9
+ },
+ {
+  "config": "L1+L2+L3+L7",
+  "layers": [
+   1,
+   2,
+   3,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 1012321,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 10
+ },
+ {
+  "config": "L1+L2+L6+L7",
+  "layers": [
+   1,
+   2,
+   6,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 1012621,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 10
+ },
+ {
+  "config": "L1+L5+L6+L7",
+  "layers": [
+   1,
+   5,
+   6,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 1012651,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 10
+ },
+ {
+  "config": "L1+L2+L3+L7",
+  "layers": [
+   1,
+   2,
+   3,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 1112321,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 11
+ },
+ {
+  "config": "L1+L2+L6+L7",
+  "layers": [
+   1,
+   2,
+   6,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 1112621,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 11
+ },
+ {
+  "config": "L1+L5+L6+L7",
+  "layers": [
+   1,
+   5,
+   6,
+   7
+  ],
+  "snr_n": 20000,
+  "seed": 1112651,
+  "k_total": 7,
+  "max_iter": 120,
+  "group": "nc3_gap_20k",
+  "sidx": 11
+ }
+]

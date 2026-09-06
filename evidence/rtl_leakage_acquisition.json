@@ -1,0 +1,19 @@
+{
+  "description": "Acquisition record for the RTL TVLA/SNR trace sets of section 4.8.4 (Verilator harness experiments/rtl/patch-validation/sim_tvla.cpp; original-stimulus arm). The per-run binaries are archived in the companion QANARY evidence tree, not in this repository.",
+  "companion_path": "qanary/evidence/experiments/rtl_leakage/{fixed,random}/run_NNNN.bin",
+  "digest_method": "per set: sha256 over the sorted lines '<file name> <sha256 of the file bytes>\\n' (rebuild with build_rtl_leakage_manifest.py)",
+  "header_bytes": 32,
+  "record_bytes": 28,
+  "cycles_per_run": 595,
+  "masked_end_cycle": 345,
+  "fixed_runs": 10000,
+  "fixed_content_sha256": "d7e12d834c0d307db245c66474640eced79a0292db632eef8f4e85d1bf72a6d9",
+  "random_runs": 10000,
+  "random_content_sha256": "edf0fbf11d2e8a8435065d6a035b1c4c92ddc78b3bd9d64d30cdef6ab43de079",
+  "total_traces": 20000,
+  "bytes_per_run": 16692,
+  "analysis_sets_reported": [
+    1000,
+    10000
+  ]
+}

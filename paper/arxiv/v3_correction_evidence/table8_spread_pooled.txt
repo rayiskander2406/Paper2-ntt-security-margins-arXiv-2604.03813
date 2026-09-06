@@ -1,0 +1,7 @@
+Table 8 spread row -- L1+L3+L5+L7 at SNR*N=5,000
+pooled over three disjoint-seed runs (10 + 20 + 50), all at 30 BP iterations
+full_key      78/80
+rate_pct      97.5%
+wilson_lo_pct 91.3%
+wilson_hi_pct 99.3%
+mean_mi_bp    11.57

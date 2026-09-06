@@ -1,6 +1,6 @@
 [project]
 name = "ntt-security-margins"
-version = "1.0.0"
+version = "3.0.0"
 description = "Artifact repository for 'Partial NTT Masking in PQC Hardware: A Security Margin Analysis' (arXiv:2604.03813)"
 authors = [
     { name = "Ray Iskander" },
@@ -18,7 +18,7 @@ dependencies = [
 
 [project.optional-dependencies]
 lattice = ["fpylll>=0.6"]
-dev = ["pytest>=7.0", "pytest-cov"]
+dev = ["pytest>=7.0", "pytest-cov", "matplotlib>=3.7"]
 
 [build-system]
 requires = ["setuptools>=68"]

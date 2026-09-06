@@ -5,8 +5,7 @@
 Measures bit success rate, mutual information extraction, and BP gain
 over single-layer observation across the full transition region.
 
-Estimated runtime: ~5 hours on Apple M2 (sequential).
-Use --quick for a demo run (~20 min): 3 points x 2 trials x 10 iters.
+Use --quick for a demo run: 3 points x 2 trials x 10 iters.
 
 Reference: arXiv:2604.03813, Section 4.8.9, Table 7.
 """

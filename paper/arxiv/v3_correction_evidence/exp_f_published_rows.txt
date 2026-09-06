@@ -1,0 +1,12 @@
+Exp F -- 2-layer BP on the minimal ML-KEM subgraph, as published in source.md (4.8.6, Table 5, sensitivity table)
+source: evidence/exp_f_2layer_bp.json  (regenerated under the all-variable convergence criterion; no seed exits at iteration 1)
+cross-check: evidence/exp_h_monte_carlo.json agrees with Exp F to <0.05 bit at both operating points
+log2_q printed 11.7  raw 11.7009
+entropy and gain printed at 1 decimal; traces = ceil((23.0 - gain_1dp) / mi_per_trace), derived from the ROUNDED gain (paper's convention)
+
+snr_n 300    entropy 11.6  raw 11.61   gain 0.1  raw 0.0911  traces 988   [operating point]
+snr_n 1000   entropy 11.2  raw 11.194  gain 0.5  raw 0.5071    [simulated, not an operating point; no trace count is published]
+snr_n 3000   entropy 10.1  raw 10.112  gain 1.6  raw 1.5894    [simulated, not an operating point; no trace count is published]
+snr_n 10000  entropy 8.1   raw 8.066   gain 3.6  raw 3.6351  traces 837   [operating point]
+snr_n 30000  entropy 6.5   raw 6.455   gain 5.2  raw 5.2458    [simulated, not an operating point; no trace count is published]
+note: the largest simulated gain is at snr_n 30000 (5.2 bits), above the AB range; 10^4 is the upper OPERATING point, not the maximum gain

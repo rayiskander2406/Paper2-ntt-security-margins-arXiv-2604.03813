@@ -4,133 +4,286 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19508454.svg)](https://doi.org/10.5281/zenodo.19508454)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
-Artifact repository for reproducing results from [arXiv:2604.03813](https://arxiv.org/abs/2604.03813).
+Artifact repository for [arXiv:2604.03813](https://arxiv.org/abs/2604.03813), version 3.
+Ray Iskander and Khaled Kirah.
 
 ## Abstract
 
-We present a Security Margin Audit methodology for evaluating partially masked NTT hardware in post-quantum cryptographic accelerators. Applying this methodology to the Adams Bridge ML-DSA/ML-KEM accelerator, we show that masking only 1 of 8 INTT layers (12.5%) — leaving 7 layers (87.5%) unmasked — yields effective security margins 2^25 to 2^29 below claimed levels under pro-defender assumptions. A full-scale belief propagation attack on the complete ML-KEM INTT factor graph achieves 100% coefficient recovery at SNR x N = 3,000, with 30 out of 30 full-key recoveries across multiple seeds. We contribute the Security Margin Audit framework, a SASCA belief propagation pipeline validated on production-scale factor graphs, and machine-verified SMT proofs (Z3 + CVC5) establishing the algebraic backbone of our analysis.
+Adams Bridge, a hardware accelerator for ML-DSA and ML-KEM designed for the Caliptra root of trust, masks 1 of its Inverse Number Theoretic Transform (INTT) layers and relies on shuffling for the remainder, claiming per-butterfly Correlation Power Analysis (CPA) complexities of 2^46 (ML-DSA) and 2^96 (ML-KEM). We evaluate these claims across seven tracks with confidence-rated evidence. Register-Transfer Level (RTL) analysis confirms the design's Random Start Index (RSI) shuffling provides 6 bits of entropy per layer (64 orderings), not the 296 bits of a full random permutation. Under corrected test stimulus, the masked INTT round's butterfly register group fails first-order Test Vector Leakage Assessment (TVLA) at the RTL level, inverting the earlier verdict; the security margins are not re-derived from that result. A soft-analytical attack pipeline demonstrates a 37-bit attack-model gap, not a reduction in total work: it follows from the RSI structure alone, is independent of BP gains and measured SNR, and achieves no key recovery. Full-scale BP on the complete ML-KEM INTT factor graph achieves 100% coefficient recovery at SNR×N = 3,000; that graph decomposes into two independent 128-coefficient components. Layer-ablation over all 35 four-layer subsets shows observation topology sets the trace budget for BP convergence, not necessary conditions: input-adjacency and gap raise that budget by up to roughly 10× and by roughly 4×; output-anchoring and layer count are not priced. Four spread layers recover the full key in 78 of 80 seeds at SNR×N = 5,000; four consecutive need ~100× that. Masking 3 consecutive mid-layers (43% overhead) defers full recovery to SNR×N = 20,000 rather than preventing it; partial masking bounds attacker cost. We contribute an audit methodology assembled from established practice into a reproducible critique of partially masked NTT accelerators.
 
 ## Quick Start
 
 ```bash
 git clone https://github.com/rayiskander2406/ntt-security-margins-arXiv-2604.03813.git
 cd ntt-security-margins-arXiv-2604.03813
-python -m venv venv && source venv/bin/activate
+python -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
 
-# All commands below assume the virtual environment is active.
-
-# Verify pre-computed results match paper claims (~1 min)
-python reproduce.py --verify
-
-# Run analytical experiments + formal proofs (~15 min)
-python reproduce.py --quick
-
-# Run everything including full BP sweep (~24 hours)
-python reproduce.py --full
+python reproduce.py --verify   # checks the archived evidence against the paper's claims (15 checks)
+python reproduce.py --quick    # Exp A, D, E, G; FIPS 203 check; formal proof suite; unit tests
+python reproduce.py --medium   # adds the Exp F and Exp H belief-propagation runs
+python reproduce.py --full     # Exp I sweep, ablation, convergence, NC1, NC4, damping, key enumeration; Exp B; Exp C
 ```
+
+Python 3.10 or later. `pip install -e ".[dev]"` installs numpy, numba, scipy, z3-solver, networkx,
+pytest, pytest-cov and matplotlib. Optional: fpylll (`pip install -e ".[lattice]"`, Exp B's lattice arm), CVC5
+(the proof suite's dual-prover entry), and Verilator 5.044 with a clone of the Adams Bridge RTL for the Exp D harness in
+`experiments/rtl/` (see its README).
+
+No runtimes are stated here. The `time_s` fields of the archived belief-propagation runs in `evidence/*.json` and the
+`ablation_30iter_minutes_*` and `convergence_*_regime_minutes_*` lines of
+`paper/arxiv/v3_correction_evidence/derived_literals.txt` record the wall-clock of the archived runs.
+
+`--quick`, `--medium` and `--full` run the experiment and proof scripts, which write their outputs into
+`evidence/`, overwriting the archived files; `--verify` reads them without modifying anything. The NC1 and
+ablation records (`nc1_moonshot_results.json`, `nc1_tier1_expansion_results.json`, `ablation_results.json`,
+`all_k4_configs.json`, `ablation_tier123.json`, `nc4_validation.json`) were produced before the
+convergence-criterion correction in `src/ntt_bp/belief_propagation.py` and are not regenerated by the
+corrected solver (the pre-correction solver is the one released as v1.0.0 of this repository, tag `v1.0.0`);
+`evidence/convergence_results.json` (Table 9) has no generator in this tree, and `exp_i_convergence.py`
+overwrites it with a different seed schedule and record schema. `--verify` asserts these files, so restore
+`evidence/` (for example with `git checkout evidence/`) before running `--verify` again. The corrected corpus
+was produced with numba 0.64.0 / numpy 2.4.0 (recorded in
+`paper/arxiv/v3_correction_evidence/rederivation_ablation_table.md`).
+
+## Reproducing Section 4.8
+
+| Paper section | Experiment | Command |
+|---|---|---|
+| 4.8.1 | Exp A: factor graph construction | `python experiments/exp_a_factor_graph.py` |
+| 4.8.2 | Exp B: lattice recovery sensitivity | `python experiments/exp_b_lattice.py` (needs fpylll) |
+| 4.8.3 | Exp C: RSI shuffling overhead | `python experiments/exp_c_rsi_shuffling.py` |
+| 4.8.4 | Exp D: RTL leakage extraction | `experiments/rtl/` (Verilator harness) and `experiments/rtl/patch-validation/` (the corrected-stimulus re-run), see their READMEs; `python experiments/exp_d_rtl_constants.py` prints the archived SNR sets |
+| 4.8.5 | Exp E: template attack bridge | `python experiments/exp_e_template_bridge.py` |
+| 4.8.6 | Exp F: 2-layer belief propagation | `python experiments/exp_f_2layer_bp.py` |
+| 4.8.7 | Exp G: composite security margin | `python experiments/exp_g_composite_margin.py`; `python experiments/exp_margin_propagation.py` |
+| 4.8.8 | Exp H: Monte Carlo validation | `python experiments/exp_h_monte_carlo.py` |
+| 4.8.9 | Exp I: full-scale ML-KEM belief propagation | `python experiments/exp_i_full_scale_sweep.py`, `exp_i_ablation.py`, `exp_i_convergence.py`, `exp_i_damping.py`, `exp_i_key_enumeration.py`, `exp_i_genie_bound.py`, `exp_i_nc4_validation.py`, `exp_i_fips203_verify.py` |
+| 4.8.9 (retracted v1–v2 record) | Exp I: NC1 configurations | `python experiments/exp_i_nc1_barrier.py` (generator of `evidence/nc1_moonshot_results.json`; the archived record predates the convergence-criterion correction, so a re-run does not reproduce it and overwrites it) |
+| 4.8.9, Tables 8, 8b, 8c | Corrected re-derivation corpus | `paper/arxiv/v3_correction_evidence/` (see below) |
+| Formal proofs | Z3 / CVC5 proof suite (T1–T18) | `python proofs/paper_formal_proofs.py` (the CVC5 dual-prover entry runs when a CVC5 binary is available) |
+
+The corrected corpus in `paper/arxiv/v3_correction_evidence/` was produced by `rederive.py` (the
+re-derivation harness: `gate`, `sweep`, `run`, `probe` subcommands) from the job manifests in that
+directory; `aggregate.py` and `aggregate_transition.py` aggregate its raw records; the `build_*.py`
+builders recompute every derived table row and literal the manuscript prints from the archived records.
+`build_derived_literals.py` recomputes every derived literal from the archived records and asserts each
+against the printed value held in the script; it reads `paper/manuscripts/v3.0/source.md` and
+`paper/arxiv/v2/source.md` to diff the two bibliographies. Running a
+builder rewrites its committed output; the outputs in the tree are what the builders produce from the
+inputs in the tree.
+
+`emit_all_k4.py` and `emit_ablation_tier123.py` hold the configuration and seed schedule of
+`evidence/all_k4_configs.json` and `evidence/ablation_tier123.json` (`--dry` validates them against the
+archived files without simulation). `evidence/bkz_results.json` is the output of `experiments/exp_b_lattice.py`, which writes it under the
+name `evidence/lattice_sensitivity.json`; `evidence/nc1_tier1_expansion_results.json` has no generator in
+this tree. Table 8b's F-series rows (K = 8, q = 97) report runs whose logs are not archived, as the
+manuscript states. `proofs/nc3_fourier_contraction.py` and `evidence/nc3_proof.json` are the
+v1–v2 NC3 justification that version 3 withdraws; they are kept as the retracted record and are not run by
+`reproduce.py`.
 
 ## Repository Structure
 
-```
-ntt-security-margins-arXiv-2604.03813/
-├── reproduce.py                  # Main reproduction entry point
-├── experiments/                  # All paper experiments
-│   ├── exp_a_factor_graph.py     # Exp A: Factor graph construction + treewidth
-│   ├── exp_b_lattice.py          # Exp B: Lattice sensitivity analysis
-│   ├── exp_c_rsi_shuffling.py    # Exp C: RSI shuffling countermeasures
-│   ├── exp_d_rtl_constants.py    # Exp D: RTL constant extraction (SNR)
-│   ├── exp_e_template_bridge.py  # Exp E: Template-to-BP bridge
-│   ├── exp_f_2layer_bp.py        # Exp F: 2-layer BP validation
-│   ├── exp_g_composite_margin.py # Exp G: Composite security margin
-│   ├── exp_h_monte_carlo.py      # Exp H: Monte Carlo on minimal graph
-│   ├── exp_i_full_scale_sweep.py # Exp I: Full-scale BP sweep (120 trials)
-│   ├── exp_i_ablation.py         # Exp I: Layer ablation (14 configs)
-│   ├── exp_i_nc1_barrier.py      # Exp I: NC1 barrier (no-L1 configs)
-│   ├── exp_i_nc4_validation.py   # Exp I: NC4 held-out validation
-│   ├── exp_i_convergence.py      # Exp I: BP convergence analysis
-│   ├── exp_i_damping.py          # Exp I: Damping sensitivity
-│   ├── exp_i_key_enumeration.py  # Exp I: Key enumeration bounds
-│   ├── exp_i_genie_bound.py      # Exp I: Genie-aided lower bound
-│   └── exp_i_fips203_verify.py   # Exp I: FIPS 203 NTT correctness
-├── proofs/                       # Formal SMT proofs
-│   ├── paper_formal_proofs.py    # T1-T5 combined proof suite
-│   ├── T1_value_independence_distributional.py
-│   ├── T2_boolean_reparametrization_round_trip.py
-│   ├── T3_arithmetic_reparametrization_round_trip.py
-│   ├── T4_no_overflow_assertion.py
-│   ├── T5_mlkem_bias_ratio.py
-│   ├── T6_small_instance_value_independence.py
-│   ├── nc3_fourier_contraction.py  # NC3 gap-contraction proof
-│   └── run_all_proofs.py         # Run all 19 proof checks
-├── evidence/                     # Pre-computed results (JSON)
-│   ├── sweep_results.json        # Full 120-trial BP sweep
-│   ├── ablation_results.json     # Layer ablation results
-│   ├── ablation_tier123.json     # Extended tier 1-3 ablation
-│   ├── convergence_results.json  # BP convergence data
-│   ├── nc1_moonshot_results.json # NC1 barrier evidence
-│   ├── nc3_proof.json            # NC3 statistical proof
-│   ├── nc4_validation.json       # NC4 held-out validation
-│   ├── paper_proofs.json         # Formal proof results
-│   └── ...                       # Additional evidence files
-├── src/ntt_bp/                   # Core library
-├── tests/                        # Unit tests
-├── pyproject.toml                # Package configuration
-└── requirements.txt              # Pinned dependencies
-```
+<!-- STRUCTURE:BEGIN -->
+**Root**
 
-## Reproducing Paper Results
+- `.gitignore` — git ignore rules (run junk, virtual environments, derived manuscript builds)
+- `.zenodo.json` — Zenodo deposit metadata for the GitHub release
+- `CITATION.cff` — citation metadata (version 3.0.0)
+- `LICENSE` — Apache License 2.0
+- `README.md` — this artifact's README
+- `emit_ablation_tier123.py` — regeneration driver and seed-schedule specification for evidence/ablation_tier123.json (`--dry` validates without simulation; the archived per-seed results predate the convergence-criterion correction)
+- `emit_all_k4.py` — regeneration driver and seed-schedule specification for evidence/all_k4_configs.json (`--dry` validates the committed configuration and seed formula without simulation; the archived per-seed results predate the convergence-criterion correction)
+- `pyproject.toml` — package configuration and dependencies (pip install -e ".[dev]")
+- `reproduce.py` — reproduction driver: --verify checks the archived evidence and the corrected corpus against the paper's claims; --quick/--medium/--full run the experiments and proofs
+- `requirements.txt` — core dependencies (minimum versions)
+- `ARTIFACT_MANIFEST.txt` — this manifest: every file with its purpose class
 
-| Paper Reference | Experiment | Command | Runtime | Key Claim |
-|----------------|------------|---------|---------|-----------|
-| Table 7 (Section 4.8.9) | Exp I: Full-scale BP sweep | `python experiments/exp_i_full_scale_sweep.py` | ~5h | 100% recovery at SNR x N = 3000 |
-| Table 8 (Section 4.8.9) | Exp I: Layer ablation | `python experiments/exp_i_ablation.py` | ~10h | 4 spread layers > 6 consecutive |
-| Section 4.8.1 | Exp A: Factor graph | `python experiments/exp_a_factor_graph.py` | ~30s | Treewidth > 30; 512 RSI runs |
-| Section 4.8.2 | Exp B: Lattice sensitivity | `python experiments/exp_b_lattice.py` | ~30m | 47% at 1% error, 0% at 10% |
-| Section 4.8.3 | Exp C: RSI shuffling | `python experiments/exp_c_rsi_shuffling.py` | ~10m | RSI 7.3x at sigma_bias/sigma = 0.3 |
-| Section 4.8.4 | Exp D: RTL constants | `python experiments/exp_d_rtl_constants.py` | instant | SNR = 0.0027 (butterfly) |
-| Section 4.8.5 | Exp E: Template bridge | `python experiments/exp_e_template_bridge.py` | instant | 992 traces for MI exhaustion |
-| Section 4.8.6 | Exp F: 2-layer BP | `python experiments/exp_f_2layer_bp.py` | ~1h | 3.9-bit gain at SNR x N = 10^4 |
-| Section 4.8.7 | Exp G: Composite margin | `python experiments/exp_g_composite_margin.py` | instant | 37-bit attack-model gap |
-| Section 4.8.8 | Exp H: Monte Carlo | `python experiments/exp_h_monte_carlo.py` | ~1h | >50% error on minimal graph |
-| Section 4.8.9 | NC1 barrier | `python experiments/exp_i_nc1_barrier.py` | ~3h | MI approx 0 across all no-L1 configs |
-| Section 4.8.9 | NC4 validation | `python experiments/exp_i_nc4_validation.py` | ~1h | {1,3,4,7} validates k >= 4 |
-| Claim C6 | Formal proofs (19 checks) | `python proofs/paper_formal_proofs.py` | ~60s | All pass (Z3 + CVC5) |
-| Section 4.8.9 | NC3 proof | `python proofs/nc3_fourier_contraction.py` | ~1s | Fisher p = 0.0083 |
+**`src/ntt_bp/` — core library**
 
-## Experiments
+- `src/ntt_bp/__init__.py` — ntt_bp package
+- `src/ntt_bp/belief_propagation.py` — belief-propagation solver on the INTT factor graph (all-variable convergence criterion)
+- `src/ntt_bp/constants.py` — ML-KEM/ML-DSA constants, FIPS 203 twiddles, RTL-derived SNR sets
+- `src/ntt_bp/factor_graph.py` — ML-KEM INTT factor-graph construction
+- `src/ntt_bp/statistics.py` — Wilson intervals and mutual-information helpers
 
-**Analytical experiments (A, C, D, E, G)** derive security parameters from closed-form analysis of the NTT structure, RTL constants, and information-theoretic bounds. These run in seconds to minutes and require no simulation.
+**`tests/` — unit tests**
 
-**Simulation experiments (F, H, I)** run belief propagation on NTT factor graphs of varying scale. Experiment F validates on a 2-layer subgraph; Experiment H uses Monte Carlo sampling on a minimal graph to quantify approximation error; Experiment I runs the full 7-layer ML-KEM INTT factor graph (256 coefficients, 896 butterflies) across 120 trials at 8 SNR x N operating points, plus 14 layer-ablation configurations with 10 seeds each.
+- `tests/test_factor_graph.py` — unit tests: factor graph and INTT correctness
+- `tests/test_statistics.py` — unit tests: statistics helpers
 
-**Formal proofs** encode algebraic properties as SMT constraints verified by Z3 and CVC5. The proof suite covers value independence (T1), Boolean and arithmetic reparametrization round-trips (T2, T3), overflow absence (T4), ML-KEM bias ratios (T5), and universal finite-field value independence (T6). The NC3 gap-contraction proof uses Fisher's exact test on empirical ablation data.
+**`proofs/` — formal SMT proofs**
 
-## Hardware Requirements
+- `proofs/README.md` — proof suite: how to run it, CVC5 note
+- `proofs/nc3_fourier_contraction.py` — v1–v2 NC3 Fourier-contraction computation whose justification version 3 withdraws; kept as the retracted record, not run by reproduce.py
+- `proofs/paper_formal_proofs.py` — combined proof suite T1–T18 (rewrites evidence/paper_proofs.json on each run)
 
-- **Minimum:** 8 GB RAM, any modern CPU (for `--quick` and `--verify` modes)
-- **Recommended:** 16 GB RAM, multi-core CPU (for full BP experiments)
-- **Full suite:** Apple M2 or equivalent, ~24 hours total compute
-- **Note:** Numba JIT compilation adds ~2 minutes of startup time on first run
+**`experiments/` — paper experiments**
 
-## Dependencies
+- `experiments/exp_a_factor_graph.py` — Exp A: factor-graph construction and treewidth bounds (section 4.8.1)
+- `experiments/exp_b_lattice.py` — Exp B: lattice recovery sensitivity (section 4.8.2; fpylll); writes evidence/lattice_sensitivity.json, archived as evidence/bkz_results.json
+- `experiments/exp_c_rsi_shuffling.py` — Exp C: RSI shuffling overhead (section 4.8.3)
+- `experiments/exp_d_rtl_constants.py` — Exp D: RTL-derived TVLA/SNR constants (section 4.8.4)
+- `experiments/exp_e_template_bridge.py` — Exp E: template-to-BP bridge (section 4.8.5)
+- `experiments/exp_f_2layer_bp.py` — Exp F: 2-layer belief propagation (section 4.8.6)
+- `experiments/exp_g_composite_margin.py` — Exp G: composite security margin (section 4.8.7)
+- `experiments/exp_h_monte_carlo.py` — Exp H: Monte Carlo validation (section 4.8.8)
+- `experiments/exp_i_ablation.py` — Exp I: layer ablation (section 4.8.9, Table 8)
+- `experiments/exp_i_convergence.py` — Exp I: convergence traces; writes evidence/convergence_results.json with a different seed schedule and record schema from the archived Table 9 record
+- `experiments/exp_i_damping.py` — Exp I: damping sensitivity (section 4.8.9)
+- `experiments/exp_i_fips203_verify.py` — Exp I: FIPS 203 INTT correctness check
+- `experiments/exp_i_full_scale_sweep.py` — Exp I: full-scale SNR×N sweep (section 4.8.9, Table 7)
+- `experiments/exp_i_genie_bound.py` — Exp I: oracle-aided independent-channel upper bound
+- `experiments/exp_i_key_enumeration.py` — Exp I: key enumeration (section 4.8.9)
+- `experiments/exp_i_nc1_barrier.py` — Exp I: generator of the retracted NC1 record evidence/nc1_moonshot_results.json; the record predates the convergence-criterion correction and is not reproduced by the corrected solver
+- `experiments/exp_i_nc4_validation.py` — Exp I: NC4 validation run (section 4.8.9)
+- `experiments/exp_margin_propagation.py` — margin propagation through the Exp E/G chain under the four SNR sets (section 4.8.4/4.8.7)
 
-| Package | Version | Required | Purpose |
-|---------|---------|----------|---------|
-| numpy | >= 1.24 | Yes | Array operations |
-| numba | >= 0.58 | Yes | JIT-accelerated BP message passing |
-| scipy | >= 1.10 | Yes | Fisher exact test (NC3 proof) |
-| z3-solver | >= 4.12 | Yes | SMT formal proofs |
-| networkx | >= 3.0 | Yes | Factor graph treewidth (Exp A) |
-| fpylll | >= 0.6 | Optional | Lattice reduction (Exp B) |
-| CVC5 | any | Optional | Universal finite field proof (T6) |
+**`experiments/rtl/` — Exp D Verilator harness**
 
-## Reproducibility Notes
+- `experiments/rtl/README.md` — Exp D Verilator harness: what is here, known gap, paths, Adams Bridge revision, how to reproduce
+- `experiments/rtl/build.sh` — Verilator build for the Exp D harness
+- `experiments/rtl/ntt_wrapper_patched.sv` — modified Adams Bridge ntt_wrapper (Apache-2.0, upstream notice retained) the harness builds against
+- `experiments/rtl/run_tvla.py` — Exp D batch runner and TVLA/SNR analysis
+- `experiments/rtl/sim_main.cpp` — Exp D Verilator testbench (per-cycle HW/HD records)
 
-- **Virtual environment required.** All `python` commands assume the venv created during Quick Start is active. If you see `ModuleNotFoundError: No module named 'ntt_bp'`, activate the venv: `source venv/bin/activate`.
-- **Deterministic seeds.** All stochastic experiments use fixed random seeds (base seed 42). The full sweep uses `seed = trial * 100000 + snr_n`; ablation uses `seed = trial_index * 1000 + config_index`. Results should be bitwise reproducible on the same platform.
-- **Platform variation.** Numba JIT compilation may produce slightly different floating-point results across CPU architectures due to SIMD instruction differences. Recovery rates (integer counts) are deterministic; entropy values (floating-point) may vary in the last decimal place.
-- **MI rounding note.** The paper's worked example (Section 4.8.5) shows intermediate rounded values that multiply to 0.023198 bits/trace/coefficient. The script computes from full precision, yielding 0.023194. Both produce 992 traces — the headline claim is identical.
+**`experiments/rtl/patch-validation/` — patched-RTL validation and the corrected-stimulus re-run**
+
+- `experiments/rtl/patch-validation/README.md` — patched-RTL validation harness and the corrected-stimulus Exp D re-run
+- `experiments/rtl/patch-validation/analyze.py` — independent analysis: placement check, power control, case under test
+- `experiments/rtl/patch-validation/analyze_fill.py` — static reproduction of Exp D's stimulus fill
+- `experiments/rtl/patch-validation/build_tvla.sh` — build driver for sim_tvla.cpp
+- `experiments/rtl/patch-validation/build_variant.sh` — Verilator build driver, one object directory per wrapper variant
+- `experiments/rtl/patch-validation/check.py` — decode and compare memory dumps
+- `experiments/rtl/patch-validation/final.py` — A/B driver: published traces vs corrected stimulus at N = 10,000
+- `experiments/rtl/patch-validation/final_results.json` — results of final.py: TVLA max|t| and SNR per register group, both arms, N = 1,000 and 10,000 (section 4.8.4)
+- `experiments/rtl/patch-validation/reference_check.py` — comparison against the designers' golden model
+- `experiments/rtl/patch-validation/rerun.py` — A/B driver at arbitrary N
+- `experiments/rtl/patch-validation/run_matrix.sh` — the full experiment matrix
+- `experiments/rtl/patch-validation/sim_dump.cpp` — harness with an output dump after ntt_done
+- `experiments/rtl/patch-validation/sim_indep.cpp` — independent re-derivation harness with intent sidecar
+- `experiments/rtl/patch-validation/sim_tvla.cpp` — sim_main.cpp with +fill/+decouple stimulus switches
+
+**`evidence/` — archived runs (JSON)**
+
+- `evidence/ablation_results.json` — Exp I layer ablation, pre-correction corpus (Table 8)
+- `evidence/ablation_tier123.json` — Exp I extended ablation, disjoint seeds (Table 8 pooled rows)
+- `evidence/all_k4_configs.json` — Exp I exhaustive sweep over the 35 four-layer subsets
+- `evidence/bkz_results.json` — Exp B lattice trials (900 records over 20 arms; output of experiments/exp_b_lattice.py, which writes it as evidence/lattice_sensitivity.json)
+- `evidence/composite_margin.json` — Exp G output
+- `evidence/convergence_results.json` — Exp I convergence traces (Table 9); no generator in this tree
+- `evidence/damping_sensitivity.json` — Exp I damping sensitivity
+- `evidence/exp_f_2layer_bp.json` — Exp F output, regenerated under the all-variable convergence criterion
+- `evidence/exp_h_monte_carlo.json` — Exp H output, regenerated under the all-variable convergence criterion
+- `evidence/factor_graph_metrics.json` — Exp A factor-graph metrics (treewidth upper bounds)
+- `evidence/genie_bound.json` — Exp I oracle-aided upper bound
+- `evidence/key_enumeration_results.json` — Exp I key-enumeration run
+- `evidence/margin_propagation.json` — exp_margin_propagation.py output
+- `evidence/nc1_moonshot_results.json` — retracted NC1 record (pre-correction convergence check; bp_iterations == 1 signature)
+- `evidence/nc1_tier1_expansion_results.json` — retracted NC1 record (pre-correction convergence check); no generator in this tree
+- `evidence/nc3_proof.json` — retracted v1–v2 NC3 justification record (output of proofs/nc3_fourier_contraction.py); version 3 withdraws it
+- `evidence/nc4_validation.json` — NC4 validation run (Table 8 {1,3,4,7} row, 10 seeds)
+- `evidence/paper_proofs.json` — formal proof suite results (rewritten by proofs/paper_formal_proofs.py on each run)
+- `evidence/rtl_leakage_acquisition.json` — acquisition record and content digests of the RTL trace sets (the per-run binaries are not in this repository)
+- `evidence/sweep_results.json` — Exp I full-scale sweep (Table 7)
+- `evidence/tvla_results.json` — Exp D TVLA/SNR analysis of the published stimulus at N = 1,000
+
+**`evidence/experiments/rsi_vs_rp/`**
+
+- `evidence/experiments/rsi_vs_rp/shuffling_overhead.json` — Exp C shuffling-overhead records
+
+**`paper/manuscripts/v3.0/`**
+
+- `paper/manuscripts/v3.0/source.md` — manuscript text, version 3 (as submitted to arXiv); read by build_derived_literals.py
+
+**`paper/arxiv/v2/`**
+
+- `paper/arxiv/v2/source.md` — manuscript text, version 2 as published on arXiv, superseded by v3; kept for the bibliography-diff check in build_derived_literals.py
+
+**`paper/arxiv/v3_correction_evidence/` — the corrected corpus: raw records, generators, builders and their outputs**
+
+- `paper/arxiv/v3_correction_evidence/ablation_census.txt` — build_ablation_census.py output
+- `paper/arxiv/v3_correction_evidence/aggregate.py` — aggregates results.jsonl into rederivation_results.json, rederivation_ablation_table.md and (via nc_verdicts.py) rederivation_NC_verdicts.md
+- `paper/arxiv/v3_correction_evidence/aggregate_transition.py` — assembles the gap≥3 recovery curve (5k → 8k/12k/15k → 20k → 50k) into gap_transition_agg.json and the figure
+- `paper/arxiv/v3_correction_evidence/build_ablation_census.py` — counts the ablation study's distinct trials and configurations in both corpora
+- `paper/arxiv/v3_correction_evidence/build_derived_literals.py` — recomputes every derived literal the manuscript prints from the archived records, asserts each against the printed value held in the script, and diffs the v2/v3 bibliographies
+- `paper/arxiv/v3_correction_evidence/build_eff_table.py` — BP-efficiency table rows from eff_sweep_results.jsonl and rederivation_results.json
+- `paper/arxiv/v3_correction_evidence/build_exp_b_published_rows.py` — Exp B published rows from evidence/bkz_results.json
+- `paper/arxiv/v3_correction_evidence/build_exp_c_published_row.py` — Exp C published row from the archived shuffling-overhead medians
+- `paper/arxiv/v3_correction_evidence/build_exp_e_g_literals.py` — Exp E / Exp G chain values from constants.py and composite_margin.json
+- `paper/arxiv/v3_correction_evidence/build_exp_f_published_rows.py` — Exp F published rows from evidence/exp_f_2layer_bp.json
+- `paper/arxiv/v3_correction_evidence/build_exp_h_published_rows.py` — Exp H published rows from evidence/exp_h_monte_carlo.json
+- `paper/arxiv/v3_correction_evidence/build_generator_metadata.py` — reads the Exp F / Exp H generators and emits their trial geometry
+- `paper/arxiv/v3_correction_evidence/build_manifest.py` — builds manifest.json from the committed evidence/*.json configurations and seeds
+- `paper/arxiv/v3_correction_evidence/build_nc1_superseded_counts.py` — NC1 superseded-trial counts from rederivation_results.json (run from its own directory)
+- `paper/arxiv/v3_correction_evidence/build_rtl_leakage_manifest.py` — builds evidence/rtl_leakage_acquisition.json from the companion RTL trace sets (requires them; not runnable from this tree alone)
+- `paper/arxiv/v3_correction_evidence/build_table2_layer_fractions.py` — Table 2 layer fractions from evidence/factor_graph_metrics.json
+- `paper/arxiv/v3_correction_evidence/build_table7_normalized_efficiency.py` — Table 7 normalized-efficiency quotients from evidence/sweep_results.json
+- `paper/arxiv/v3_correction_evidence/build_table8_pooled_rows.py` — every Table 8 configuration run more than once at SNR×N = 5,000, pooled
+- `paper/arxiv/v3_correction_evidence/build_table8_spread_pooled.py` — Table 8 spread row pooled over its three runs
+- `paper/arxiv/v3_correction_evidence/build_wilson_literals.py` — Wilson 95% bounds at full precision for the small (k, n) the manuscript prints
+- `paper/arxiv/v3_correction_evidence/c6_framing_ladder_2026-07-27.jsonl` — raw per-run records of the framing ladder
+- `paper/arxiv/v3_correction_evidence/c6_ladder_GATE_2026-07-27.log` — trust-gate record (stdout of `rederive.py gate`) for the framing ladder
+- `paper/arxiv/v3_correction_evidence/derived_literals.txt` — build_derived_literals.py output
+- `paper/arxiv/v3_correction_evidence/eff_sweep_results.jsonl` — raw per-run records of the BP-efficiency sweep (Table 7 MI_BP column, section 4.8.9)
+- `paper/arxiv/v3_correction_evidence/eff_table_rows.txt` — build_eff_table.py output
+- `paper/arxiv/v3_correction_evidence/exp_b_published_rows.txt` — build_exp_b_published_rows.py output
+- `paper/arxiv/v3_correction_evidence/exp_c_published_row.txt` — build_exp_c_published_row.py output
+- `paper/arxiv/v3_correction_evidence/exp_e_g_literals.txt` — build_exp_e_g_literals.py output
+- `paper/arxiv/v3_correction_evidence/exp_f_published_rows.txt` — build_exp_f_published_rows.py output
+- `paper/arxiv/v3_correction_evidence/exp_f_rerun_2026-09-01.json` — record of the Exp F regeneration under the all-variable criterion (identical to evidence/exp_f_2layer_bp.json apart from wall-clock fields)
+- `paper/arxiv/v3_correction_evidence/exp_h_published_rows.txt` — build_exp_h_published_rows.py output
+- `paper/arxiv/v3_correction_evidence/exp_h_rerun_2026-09-01.json` — record of the Exp H regeneration under the all-variable criterion (identical to evidence/exp_h_monte_carlo.json)
+- `paper/arxiv/v3_correction_evidence/gap20k_GATE.log` — trust-gate record (stdout of `rederive.py gate`) for the 20,000 sweep
+- `paper/arxiv/v3_correction_evidence/gap20k_results.jsonl` — raw per-run records of the 20,000 sweep
+- `paper/arxiv/v3_correction_evidence/gap_transition_agg.json` — aggregate_transition.py output
+- `paper/arxiv/v3_correction_evidence/gap_transition_results.jsonl` — raw per-run records of the gap≥3 transition sweep
+- `paper/arxiv/v3_correction_evidence/generator_metadata.txt` — build_generator_metadata.py output
+- `paper/arxiv/v3_correction_evidence/launch_sweep.sh` — launches rederive.py sweep over manifest.json into results.jsonl
+- `paper/arxiv/v3_correction_evidence/manifest.json` — job manifest of the main re-derivation sweep (output of build_manifest.py)
+- `paper/arxiv/v3_correction_evidence/manifest_c6_ladder_2026-07-27.json` — job manifest of the consecutive-layer framing ladder (L1–L4 at 50k/100k/500k; the c6_ prefix names this ladder)
+- `paper/arxiv/v3_correction_evidence/manifest_eff_sweep.json` — job manifest of the BP-efficiency sweep
+- `paper/arxiv/v3_correction_evidence/manifest_gap20k.json` — job manifest of the gap≥3 sweep at SNR×N = 20,000
+- `paper/arxiv/v3_correction_evidence/manifest_gap_transition.json` — job manifest of the gap≥3 transition sweep (8k/12k/15k)
+- `paper/arxiv/v3_correction_evidence/manifest_nc3_5k_cap120.json` — job manifest of the gap≥3 5,000 re-run at the 120-iteration cap
+- `paper/arxiv/v3_correction_evidence/nc1_repro.py` — control and forced-convergence runs of the committed NC1-A instance (the archived control's one-iteration early exit is pre-correction behaviour the corrected solver does not reproduce)
+- `paper/arxiv/v3_correction_evidence/nc1_repro_result.json` — nc1_repro.py output
+- `paper/arxiv/v3_correction_evidence/nc1_superseded_counts.txt` — build_nc1_superseded_counts.py output
+- `paper/arxiv/v3_correction_evidence/nc3_5k_cap120_results.jsonl` — raw per-run records of the 5,000 cap-120 re-run
+- `paper/arxiv/v3_correction_evidence/nc_contamination_map.py` — partitions the committed configurations by the early-exit signature (reads evidence/*.json only)
+- `paper/arxiv/v3_correction_evidence/nc_corrected_rerun.py` — re-runs four no-L1 configurations with the early exit disabled (convergence_tol = -1.0, 50 fixed iterations)
+- `paper/arxiv/v3_correction_evidence/nc_corrected_result.json` — nc_corrected_rerun.py output
+- `paper/arxiv/v3_correction_evidence/nc_verdicts.py` — emits rederivation_NC_verdicts.md from rederivation_results.json
+- `paper/arxiv/v3_correction_evidence/recovery_curve_gap_configs.png` — aggregate_transition.py figure
+- `paper/arxiv/v3_correction_evidence/rederivation_NC_verdicts.md` — corrected NC1–NC4 statements, each backed by a cell of rederivation_results.json
+- `paper/arxiv/v3_correction_evidence/rederivation_ablation_table.md` — corrected ablation table (aggregate.py output)
+- `paper/arxiv/v3_correction_evidence/rederivation_results.json` — corrected corpus: every run plus per-(config, SNR×N) aggregates with the committed comparison; loaded by reproduce.py
+- `paper/arxiv/v3_correction_evidence/rederive.py` — re-derivation harness: gate / sweep / run / probe under the corrected all-variable convergence criterion
+- `paper/arxiv/v3_correction_evidence/results.jsonl` — raw per-run records of the main re-derivation sweep
+- `paper/arxiv/v3_correction_evidence/table2_layer_fractions.txt` — build_table2_layer_fractions.py output
+- `paper/arxiv/v3_correction_evidence/table7_normalized_efficiency.txt` — build_table7_normalized_efficiency.py output
+- `paper/arxiv/v3_correction_evidence/table8_pooled_rows.json` — build_table8_pooled_rows.py output
+- `paper/arxiv/v3_correction_evidence/table8_pooled_rows.txt` — build_table8_pooled_rows.py output (literal form)
+- `paper/arxiv/v3_correction_evidence/table8_spread_pooled.json` — build_table8_spread_pooled.py output
+- `paper/arxiv/v3_correction_evidence/table8_spread_pooled.txt` — build_table8_spread_pooled.py output (literal form)
+- `paper/arxiv/v3_correction_evidence/transition_GATE.log` — trust-gate record (stdout of `rederive.py gate`) for the transition sweep
+- `paper/arxiv/v3_correction_evidence/wilson_literals.txt` — build_wilson_literals.py output
+<!-- STRUCTURE:END -->
+
+`ARTIFACT_MANIFEST.txt` lists every file with its purpose. The figure files `media/image1.png` and
+`media/image2.png` that `paper/manuscripts/v3.0/source.md` references are not included.
+
+## What changed in version 3
+
+The v1–v2 finding that masking the input NTT layer creates a structural barrier (MI ≈ 0 across 160
+no-L1 trials) was an artifact of a belief-propagation convergence check evaluated over Layer-0
+variables only; it is retracted, and under the corrected all-variable criterion no-L1 configurations
+recover the full key. Under corrected test stimulus, the masked INTT round's butterfly register group
+fails first-order TVLA (max|t| = 5.98 at N = 1,000 and 13.18 at N = 10,000), inverting the v1–v2 pass
+at 3.36; the security margins are not re-derived from that result. The corrected corpus, its
+generators and the builders that regenerate every derived literal of the v3 text live in
+`paper/arxiv/v3_correction_evidence/`, and `reproduce.py --verify` resolves the retracted NC1 and
+ablation claims against it.
 
 ## Citation
 

@@ -26,7 +26,7 @@ def main():
     print("Experiment E: Template Attack Bridge")
     print("=" * 60)
 
-    # Three leakage sources per coefficient per unmasked INTT layer
+    # Three leakage sources per coefficient per unmasked hardware round
     groups = ["butterfly", "mem_write", "mem_read"]
     mi_per_group = {}
     total_mi_per_transition = 0.0
@@ -40,11 +40,12 @@ def main():
         total_mi_per_transition += mi
         print(f"{g:<12} {snr:>8.4f} {mi:>10.6f}")
 
-    # Each coefficient traverses all 3 register groups per unmasked INTT layer
+    # Each coefficient traverses all 3 register groups once per hardware round,
+    # and the INTT executes three unmasked hardware rounds (round zero is masked).
     mi_per_trace = total_mi_per_transition * 3
 
     print(f"\nCombined MI per trace per coefficient: {mi_per_trace:.6f} bits")
-    print(f"  ({total_mi_per_transition:.6f} bits/transition x 3 transitions/trace)")
+    print(f"  ({total_mi_per_transition:.6f} bits/round x 3 unmasked rounds/trace)")
 
     # Note: The paper's worked example (Section 4.8.5) shows intermediate
     # rounded values that multiply to 0.023198; this script computes from
@@ -54,8 +55,6 @@ def main():
     traces_full = math.ceil(MLDSA_COEFF_BITS / mi_per_trace)
     print(f"\nML-DSA coefficient entropy: {MLDSA_COEFF_BITS} bits")
     print(f"Traces for full MI recovery: {traces_full}")
-    print(f"Traces for <5% MAP error:   {traces_full - 3}")
-    print(f"Traces for <2% MAP error:   {traces_full - 1}")
 
 
 if __name__ == "__main__":
